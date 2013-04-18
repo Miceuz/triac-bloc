@@ -1,0 +1,206 @@
+Cmp-Mod V01 Created by CvPcb (2013-02-14 BZR 3950)-testing date = Sunday, 2013 April 14 21:47:43
+
+BeginCmp
+TimeStamp = /511F7F96;
+Reference = C1;
+ValeurCmp = 10nF 400V;
+IdModule  = rc-master-C100-140X060;
+EndCmp
+
+BeginCmp
+TimeStamp = /51602650;
+Reference = C2;
+ValeurCmp = 47nF 400V;
+IdModule  = rc-master-C150-190X070;
+EndCmp
+
+BeginCmp
+TimeStamp = /51601848;
+Reference = C3;
+ValeurCmp = 100nF 400V;
+IdModule  = rc-master-C150-190X070;
+EndCmp
+
+BeginCmp
+TimeStamp = /516A4F31;
+Reference = C4;
+ValeurCmp = 100nF;
+IdModule  = -C0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /516A50F4;
+Reference = C5;
+ValeurCmp = 100uF;
+IdModule  = rc-master-CE-035X100;
+EndCmp
+
+BeginCmp
+TimeStamp = /516A4B29;
+Reference = CON1;
+ValeurCmp = AVR-ISP-6;
+IdModule  = atmel-AVR-ISP-6;
+EndCmp
+
+BeginCmp
+TimeStamp = /511F7D38;
+Reference = F1;
+ValeurCmp = FUSE;
+IdModule  = Fuseholder5x20_horiz_open_universal_Type-III;
+EndCmp
+
+BeginCmp
+TimeStamp = /5169798E;
+Reference = IC1;
+ValeurCmp = ATTINY44-SS;
+IdModule  = -SO-14;
+EndCmp
+
+BeginCmp
+TimeStamp = /511F7ED4;
+Reference = L1;
+ValeurCmp = 40-100uH;
+IdModule  = Choke_Toroid_8x16mm_Vertical;
+EndCmp
+
+BeginCmp
+TimeStamp = /511F854D;
+Reference = P1;
+ValeurCmp = CONN_4;
+IdModule  = connect-SC-04;
+EndCmp
+
+BeginCmp
+TimeStamp = /516976FE;
+Reference = P2;
+ValeurCmp = CONTACT;
+IdModule  = HOLE_60;
+EndCmp
+
+BeginCmp
+TimeStamp = /5169770B;
+Reference = P3;
+ValeurCmp = CONTACT;
+IdModule  = HOLE_60;
+EndCmp
+
+BeginCmp
+TimeStamp = /51697711;
+Reference = P4;
+ValeurCmp = CONTACT;
+IdModule  = HOLE_60;
+EndCmp
+
+BeginCmp
+TimeStamp = /51698020;
+Reference = P6;
+ValeurCmp = CONN_4;
+IdModule  = connect-SC-04;
+EndCmp
+
+BeginCmp
+TimeStamp = /516B0787;
+Reference = Q1;
+ValeurCmp = MOSFET_N;
+IdModule  = -SOT23;
+EndCmp
+
+BeginCmp
+TimeStamp = /511F7E96;
+Reference = R1;
+ValeurCmp = 360R;
+IdModule  = Resistor_Horizontal_RM20mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /511F837C;
+Reference = R2;
+ValeurCmp = 200R;
+IdModule  = rc-master-R0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /511F7F8E;
+Reference = R3;
+ValeurCmp = 39;
+IdModule  = Resistor_Horizontal_RM15mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /511F8128;
+Reference = R4;
+ValeurCmp = 8.2k 5W;
+IdModule  = Resistor_Horizontal_RM30mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /511F812E;
+Reference = R5;
+ValeurCmp = 8.2k 5W;
+IdModule  = Resistor_Horizontal_RM30mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /51602617;
+Reference = R6;
+ValeurCmp = 470R;
+IdModule  = Resistor_Horizontal_RM15mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /516986E3;
+Reference = R7;
+ValeurCmp = R;
+IdModule  = -R0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /516A9D39;
+Reference = R8;
+ValeurCmp = 510k;
+IdModule  = Resistor_Horizontal_RM15mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /516B0880;
+Reference = R9;
+ValeurCmp = 10k;
+IdModule  = -R0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /516B0869;
+Reference = R10;
+ValeurCmp = R;
+IdModule  = -R0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /511F7BD6;
+Reference = U1;
+ValeurCmp = MOC-3052;
+IdModule  = optocoupler-2-DIL06;
+EndCmp
+
+BeginCmp
+TimeStamp = /511F7BC7;
+Reference = U2;
+ValeurCmp = TRIAC;
+IdModule  = -TOP3;
+EndCmp
+
+BeginCmp
+TimeStamp = /51603500;
+Reference = U3;
+ValeurCmp = LTV-814;
+IdModule  = optocoupler-2-SO-4;
+EndCmp
+
+BeginCmp
+TimeStamp = /511F7F69;
+Reference = VR1;
+ValeurCmp = VR;
+IdModule  = varistor-S05K40;
+EndCmp
+
+EndListe
