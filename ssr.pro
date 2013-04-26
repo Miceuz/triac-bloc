@@ -1,6 +1,6 @@
-update=Sunday, 2013 April 14 08:45:25
+update=Thursday, 2013 April 25 08:41:12
 version=1
-last_client=cvpcb
+last_client=pcbnew
 [eeschema]
 version=1
 LibDir=
@@ -42,15 +42,20 @@ LibName29=contrib
 LibName30=valves
 [general]
 version=1
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms
 [pcbnew]
 version=1
 LastNetListRead=ssr.net
 UseCmpFile=1
-PadDrill=0.59944
-PadSizeH=1.00076
-PadSizeV=1.00076
-PcbTextSizeV=1.00076
-PcbTextSizeH=1.00076
+PadDrill=5.99948
+PadSizeH=11.999
+PadSizeV=11.999
+PcbTextSizeV=1.50114
+PcbTextSizeH=1.50114
 PcbTextThickness=0.29972
 ModuleTextSizeV=1.00076
 ModuleTextSizeH=1.00076
@@ -61,6 +66,7 @@ DrawSegmentWidth=0.20066
 BoardOutlineThickness=0.14986
 ModuleOutlineThickness=0.14986
 [pcbnew/libraries]
+LibDir=
 LibName1=connect
 LibName2=discret
 LibName3=Power-in
@@ -79,9 +85,4 @@ LibName15=ref-packages
 LibName16=diy_holes
 LibName17=atmel
 LibName18=diy_capacitors
-LibDir=
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms
+LibName19=ohw-logo
