@@ -1,0 +1,24 @@
+Drill report for /home/miceuz/Xaltura/SSR/ssr.kicad_pcb
+Created on Tue 07 May 2013 10:03:17 PM CEST
+Drill report for plated through holes :
+T1  0.51mm  0.020"  (21 holes)
+T2  0.81mm  0.032"  (6 holes)
+T3  0.91mm  0.036"  (2 holes)
+T4  1.00mm  0.039"  (6 holes)
+T5  1.00mm  0.039"  (10 holes)
+T6  1.02mm  0.040"  (23 holes)
+T7  1.20mm  0.047"  (2 holes)
+T8  1.40mm  0.055"  (3 holes)
+T9  1.78mm  0.070"  (4 holes)
+T10  2.00mm  0.079"  (2 holes)
+T11  6.00mm  0.236"  (3 holes)
+
+Total plated holes count 82
+
+
+Drill report for unplated through holes :
+T1  3.00mm  0.118"  (4 holes)
+
+Total unplated holes count 4
+
+

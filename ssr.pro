@@ -1,6 +1,6 @@
-update=Thursday, 2013 April 25 08:41:12
+update=Tue 07 May 2013 10:02:31 PM CEST
 version=1
-last_client=pcbnew
+last_client=kicad
 [eeschema]
 version=1
 LibDir=
@@ -40,8 +40,6 @@ LibName27=opto
 LibName28=atmel
 LibName29=contrib
 LibName30=valves
-[general]
-version=1
 [cvpcb]
 version=1
 NetIExt=net
@@ -51,20 +49,21 @@ EquName1=devcms
 version=1
 LastNetListRead=ssr.net
 UseCmpFile=1
-PadDrill=5.99948
-PadSizeH=11.999
-PadSizeV=11.999
-PcbTextSizeV=1.50114
-PcbTextSizeH=1.50114
-PcbTextThickness=0.29972
-ModuleTextSizeV=1.00076
-ModuleTextSizeH=1.00076
-ModuleTextSizeThickness=0.14986
-SolderMaskClearance=0
-SolderMaskMinWidth=0
-DrawSegmentWidth=0.20066
-BoardOutlineThickness=0.14986
-ModuleOutlineThickness=0.14986
+PadDrill="    0.000000"
+PadDrillOvalY="    0.000000"
+PadSizeH="    0.998220"
+PadSizeV="    0.599440"
+PcbTextSizeV="    1.501140"
+PcbTextSizeH="    1.501140"
+PcbTextThickness="    0.299720"
+ModuleTextSizeV="    1.000760"
+ModuleTextSizeH="    1.000760"
+ModuleTextSizeThickness="    0.149860"
+SolderMaskClearance="    0.000000"
+SolderMaskMinWidth="    0.000000"
+DrawSegmentWidth="    0.200660"
+BoardOutlineThickness="    0.149860"
+ModuleOutlineThickness="    0.149860"
 [pcbnew/libraries]
 LibDir=
 LibName1=connect
@@ -86,3 +85,9 @@ LibName16=diy_holes
 LibName17=atmel
 LibName18=diy_capacitors
 LibName19=ohw-logo
+LibName20=smd_capacitors
+LibName21=smd_resistors
+LibName22=libcms
+LibName23=power-resistor
+[general]
+version=1

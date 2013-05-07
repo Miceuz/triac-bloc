@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-02-14 BZR 3950)-testing date = Sunday, 2013 April 14 21:47:43
+Cmp-Mod V01 Created by CvPcb (2013-mar-13)-testing date = Fri 03 May 2013 09:37:14 PM CEST
 
 BeginCmp
 TimeStamp = /511F7F96;
@@ -36,10 +36,31 @@ IdModule  = rc-master-CE-035X100;
 EndCmp
 
 BeginCmp
+TimeStamp = /5183F45A;
+Reference = C6;
+ValeurCmp = C;
+IdModule  = c_0603;
+EndCmp
+
+BeginCmp
 TimeStamp = /516A4B29;
 Reference = CON1;
 ValeurCmp = AVR-ISP-6;
 IdModule  = atmel-AVR-ISP-6;
+EndCmp
+
+BeginCmp
+TimeStamp = /51840F81;
+Reference = D1;
+ValeurCmp = LED;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /51840FAE;
+Reference = D2;
+ValeurCmp = LED;
+IdModule  = SM0805;
 EndCmp
 
 BeginCmp
@@ -173,6 +194,20 @@ TimeStamp = /516B0869;
 Reference = R10;
 ValeurCmp = R;
 IdModule  = -R0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /51840FC2;
+Reference = R11;
+ValeurCmp = R;
+IdModule  = SM0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /51840FC9;
+Reference = R12;
+ValeurCmp = R;
+IdModule  = SM0603;
 EndCmp
 
 BeginCmp
