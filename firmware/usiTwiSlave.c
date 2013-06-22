@@ -589,8 +589,9 @@ ISR( USI_OVERFLOW_VECTOR )
       else
       {
         // the buffer is empty
-        SET_USI_TO_TWI_START_CONDITION_MODE( );
-        return;
+    	  USIDR = 0;
+        //SET_USI_TO_TWI_START_CONDITION_MODE( );
+        //return;
       } // end if
       overflowState = USI_SLAVE_REQUEST_REPLY_FROM_SEND_DATA;
       SET_USI_TO_SEND_DATA( );
