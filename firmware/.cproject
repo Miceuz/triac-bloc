@@ -21,7 +21,7 @@
 							<option id="de.innot.avreclipse.toolchain.options.toolchain.size.app.debug.469671578" name="Print Size" superClass="de.innot.avreclipse.toolchain.options.toolchain.size.app.debug"/>
 							<option id="de.innot.avreclipse.toolchain.options.toolchain.avrdude.app.debug.1867417209" name="AVRDude" superClass="de.innot.avreclipse.toolchain.options.toolchain.avrdude.app.debug"/>
 							<targetPlatform binaryParser="" id="de.innot.avreclipse.targetplatform.winavr.app.debug.833257869" name="AVR Cross-Target" superClass="de.innot.avreclipse.targetplatform.winavr.app.debug"/>
-							<builder buildPath="${workspace_loc:/SSR/Debug}" id="de.innot.avreclipse.target.builder.winavr.base.397769852" superClass="de.innot.avreclipse.target.builder.winavr.base"/>
+							<builder buildPath="${workspace_loc:/SSR/Debug}" id="de.innot.avreclipse.target.builder.winavr.base.397769852" keepEnvironmentInBuildfile="false" name="AVR GNU Make Builder" superClass="de.innot.avreclipse.target.builder.winavr.base"/>
 							<tool id="de.innot.avreclipse.tool.assembler.winavr.app.debug.1665265141" name="AVR Assembler" superClass="de.innot.avreclipse.tool.assembler.winavr.app.debug">
 								<option id="de.innot.avreclipse.assembler.option.debug.level.1335927488" name="Generate Debugging Info" superClass="de.innot.avreclipse.assembler.option.debug.level"/>
 								<inputType id="de.innot.avreclipse.tool.assembler.input.632885538" superClass="de.innot.avreclipse.tool.assembler.input"/>
@@ -29,6 +29,7 @@
 							<tool id="de.innot.avreclipse.tool.compiler.winavr.app.debug.924968103" name="AVR Compiler" superClass="de.innot.avreclipse.tool.compiler.winavr.app.debug">
 								<option id="de.innot.avreclipse.compiler.option.debug.level.1139068795" name="Generate Debugging Info" superClass="de.innot.avreclipse.compiler.option.debug.level"/>
 								<option id="de.innot.avreclipse.compiler.option.optimize.43414955" name="Optimization Level" superClass="de.innot.avreclipse.compiler.option.optimize"/>
+								<option id="de.innot.avreclipse.compiler.option.optimize.other.1608835178" name="Other Optimization Flags" superClass="de.innot.avreclipse.compiler.option.optimize.other" value="-finline-functions" valueType="string"/>
 								<inputType id="de.innot.avreclipse.compiler.winavr.input.1979707275" name="C Source Files" superClass="de.innot.avreclipse.compiler.winavr.input"/>
 							</tool>
 							<tool id="de.innot.avreclipse.tool.cppcompiler.app.debug.485545006" name="AVR C++ Compiler" superClass="de.innot.avreclipse.tool.cppcompiler.app.debug">
@@ -67,7 +68,7 @@
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
 				<configuration artifactName="${ProjName}" buildArtefactType="de.innot.avreclipse.buildArtefactType.app" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release,org.eclipse.cdt.build.core.buildArtefactType=de.innot.avreclipse.buildArtefactType.app" description="" id="de.innot.avreclipse.configuration.app.release.88030003" name="Release" parent="de.innot.avreclipse.configuration.app.release">
 					<folderInfo id="de.innot.avreclipse.configuration.app.release.88030003." name="/" resourcePath="">
-						<toolChain id="de.innot.avreclipse.toolchain.winavr.app.release.1864212314" name="AVR-GCC Toolchain" superClass="de.innot.avreclipse.toolchain.winavr.app.release">
+						<toolChain id="de.innot.avreclipse.toolchain.winavr.app.release.1864212314" name="AVR-GCC Toolchain" resourceTypeBasedDiscovery="true" superClass="de.innot.avreclipse.toolchain.winavr.app.release">
 							<option id="de.innot.avreclipse.toolchain.options.toolchain.objcopy.flash.app.release.1809555485" name="Generate HEX file for Flash memory" superClass="de.innot.avreclipse.toolchain.options.toolchain.objcopy.flash.app.release"/>
 							<option id="de.innot.avreclipse.toolchain.options.toolchain.objcopy.eeprom.app.release.1667250981" name="Generate HEX file for EEPROM" superClass="de.innot.avreclipse.toolchain.options.toolchain.objcopy.eeprom.app.release"/>
 							<option id="de.innot.avreclipse.toolchain.options.toolchain.objdump.app.release.1157510922" name="Generate Extended Listing (Source + generated Assembler)" superClass="de.innot.avreclipse.toolchain.options.toolchain.objdump.app.release"/>
@@ -82,6 +83,7 @@
 							<tool id="de.innot.avreclipse.tool.compiler.winavr.app.release.543593461" name="AVR Compiler" superClass="de.innot.avreclipse.tool.compiler.winavr.app.release">
 								<option id="de.innot.avreclipse.compiler.option.debug.level.891262779" name="Generate Debugging Info" superClass="de.innot.avreclipse.compiler.option.debug.level" value="de.innot.avreclipse.compiler.option.debug.level.none" valueType="enumerated"/>
 								<option id="de.innot.avreclipse.compiler.option.optimize.868523871" name="Optimization Level" superClass="de.innot.avreclipse.compiler.option.optimize" value="de.innot.avreclipse.compiler.optimize.size" valueType="enumerated"/>
+								<option id="de.innot.avreclipse.compiler.option.optimize.other.148532994" name="Other Optimization Flags" superClass="de.innot.avreclipse.compiler.option.optimize.other" value="-finline-functions" valueType="string"/>
 								<inputType id="de.innot.avreclipse.compiler.winavr.input.1854932061" name="C Source Files" superClass="de.innot.avreclipse.compiler.winavr.input"/>
 							</tool>
 							<tool id="de.innot.avreclipse.tool.cppcompiler.app.release.212697076" name="AVR C++ Compiler" superClass="de.innot.avreclipse.tool.cppcompiler.app.release">

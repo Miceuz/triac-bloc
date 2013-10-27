@@ -468,9 +468,17 @@ _delay_us(double __us)
 # 7 "main.c" 2
 # 1 "/usr/lib/gcc/avr/4.7.0/../../../avr/include/avr/delay.h" 1 3
 # 8 "main.c" 2
-# 1 "usi_i2c_slave.h" 1
-# 49 "usi_i2c_slave.h"
-void USI_I2C_Init(char address);
+# 1 "usiTwiSlave.h" 1
+# 46 "usiTwiSlave.h"
+# 1 "/usr/lib/gcc/avr/4.7.0/include/stdbool.h" 1 3 4
+# 47 "usiTwiSlave.h" 2
+# 56 "usiTwiSlave.h"
+void usiTwiSlaveInit( uint8_t );
+void usiTwiTransmitByte( uint8_t );
+uint8_t usiTwiReceiveByte( void );
+_Bool usiTwiDataInReceiveBuffer( void );
+void usiTwiOnStart( void (*function) () );
+void usiTwiOnStop( void (*function) () );
 # 9 "main.c" 2
 
 
@@ -486,11 +494,10 @@ void stopConductionTimer();
 void startHoldTimer();
 void setupZCInterrupt();
 
-uint16_t conductionDelay = 300;
+uint16_t conductionDelay = 290;
 uint16_t conductionCounter = 0;
-uint16_t holdDelay = 5000;
-
-unsigned char dummy = 4;
+uint16_t holdDelay = 75;
+uint16_t periodLength = 0;
 
 inline void stopConductionTimer() {
  (*(volatile uint8_t *)((0x39) + 0x20)) = 0;
@@ -500,10 +507,12 @@ inline void stopConductionTimer() {
 
 inline void conductionOn() {
  (*(volatile uint8_t *)((0x18) + 0x20)) |= (1 << (0));
+ (*(volatile uint8_t *)((0x1B) + 0x20)) |= (1 << (7));
 }
 
 inline void conductionOff() {
  (*(volatile uint8_t *)((0x18) + 0x20)) &= ~(1 << (0));
+ (*(volatile uint8_t *)((0x1B) + 0x20)) &= ~(1 << (7));
 }
 
 inline void conduct() {
@@ -533,12 +542,11 @@ void __vector_11 (void) __attribute__ ((signal,used, externally_visible)) ; void
   conduct();
   stopConductionTimer();
   startHoldTimer();
- }else if(conductionCounter > 150) {
-  (*(volatile uint8_t *)((0x18) + 0x20)) &= ~(1 << (1));
  }
 }
 
 void startConductionTimer() {
+ (*(volatile uint8_t *)((0x32) + 0x20)) = 0;
  (*(volatile uint8_t *)((0x39) + 0x20)) |= (1 << (0));
  (*(volatile uint8_t *)((0x33) + 0x20)) |= (1 << (0));
  conductionCounter = 0;
@@ -548,9 +556,8 @@ void startConductionTimer() {
 void __vector_1 (void) __attribute__ ((signal,used, externally_visible)) ; void __vector_1 (void) {
 
 
-
-
- (*(volatile uint8_t *)((0x18) + 0x20)) |= (1 << (1));
+ conductionOff();
+ stopHoldTimer();
  startConductionTimer();
 }
 
@@ -559,44 +566,68 @@ inline void setupZCInterrupt() {
  (*(volatile uint8_t *)((0x3B) + 0x20)) |= (1 << (6));
 }
 
-extern char* USI_Slave_register_buffer[];
+void measurePeriodLength() {
+ (*(volatile uint8_t *)((0x18) + 0x20)) |= (1 << (1));
+ while (0 == ((*(volatile uint8_t *)((0x16) + 0x20)) & (1 << (2))));
+ while ((*(volatile uint8_t *)((0x16) + 0x20)) & (1 << (2)));
+ (*(volatile uint16_t *)((0x2C) + 0x20)) = 0;
+ (*(volatile uint8_t *)((0x2E) + 0x20)) |= (1 << (2));
+ while (0 == ((*(volatile uint8_t *)((0x16) + 0x20)) & (1 << (2))));
+ while ((*(volatile uint8_t *)((0x16) + 0x20)) & (1 << (2)));
+ (*(volatile uint8_t *)((0x2E) + 0x20)) = 0;
+ periodLength = (*(volatile uint16_t *)((0x2C) + 0x20));
+ (*(volatile uint8_t *)((0x18) + 0x20)) &= ~(1 << (1));
+}
+
+volatile uint16_t zcLength;
+
+void measureZCLength() {
+ (*(volatile uint8_t *)((0x18) + 0x20)) |= (1 << (1));
+ while (0 == ((*(volatile uint8_t *)((0x16) + 0x20)) & (1 << (2))));
+ while ((*(volatile uint8_t *)((0x16) + 0x20)) & (1 << (2)));
+
+ while (0 == ((*(volatile uint8_t *)((0x16) + 0x20)) & (1 << (2))));
+ (*(volatile uint16_t *)((0x2C) + 0x20)) = 0;
+ (*(volatile uint8_t *)((0x2E) + 0x20)) |= (1 << (0));
+ while ((*(volatile uint8_t *)((0x16) + 0x20)) & (1 << (2)));
+ (*(volatile uint8_t *)((0x2E) + 0x20)) = 0;
+ zcLength = (*(volatile uint16_t *)((0x2C) + 0x20));
+ (*(volatile uint8_t *)((0x18) + 0x20)) &= ~(1 << (1));
+}
 
 int main (void) {
  (*(volatile uint8_t *)((0x17) + 0x20)) |= (1 << (0)) | (1 << (1));
+ (*(volatile uint8_t *)((0x1A) + 0x20)) |= (1 << (7));
+ (*(volatile uint8_t *)((0x1B) + 0x20)) = 0;
+
  (*(volatile uint8_t *)((0x18) + 0x20)) |= (1 << (0));
-
  _delay_ms(100);
-
  (*(volatile uint8_t *)((0x18) + 0x20)) &= ~(1 << (0));
- (*(volatile uint8_t *)((0x18) + 0x20)) &= ~(1 << (1));
 
- USI_Slave_register_buffer[0] = &dummy;
- USI_I2C_Init(0x20);
+ measurePeriodLength();
+ measureZCLength();
 
- setupZCInterrupt();
  __asm__ __volatile__ ("sei" ::: "memory");
 
+ usiTwiSlaveInit(0x20);
+
  while(1) {
-  if(1 == dummy) {
-   (*(volatile uint8_t *)((0x18) + 0x20)) |= (1 << (0));
-   (*(volatile uint8_t *)((0x18) + 0x20)) &= ~(1 << (1));
-  } else if (2 == dummy) {
-   (*(volatile uint8_t *)((0x18) + 0x20)) |= (1 << (1));
-   (*(volatile uint8_t *)((0x18) + 0x20)) &= ~(1 << (0));
-  } else if (3 == dummy) {
-   (*(volatile uint8_t *)((0x18) + 0x20)) |= (1 << (0));
-   (*(volatile uint8_t *)((0x18) + 0x20)) |= (1 << (1));
-  } else {
-   (*(volatile uint8_t *)((0x18) + 0x20)) &= ~(1 << (0));
-   (*(volatile uint8_t *)((0x18) + 0x20)) &= ~(1 << (1));
+  if(usiTwiDataInReceiveBuffer()) {
+   uint8_t usiRx = usiTwiReceiveByte();
+   if(1 == usiRx) {
+    conductionDelay = 220;
+   } else if (2 == usiRx) {
+    conductionDelay = 230;
+   } else if (3 == usiRx) {
+    conductionDelay = 300;
+   } else if (4 == usiRx){
+    usiTwiTransmitByte(periodLength >> 8);
+    usiTwiTransmitByte(periodLength &0x00FF);
+   } else if (5 == usiRx){
+    usiTwiTransmitByte(zcLength >> 8);
+    usiTwiTransmitByte(zcLength &0x00FF);
+   }
   }
-
-
-
-
-
-  if(conductionCounter > 10) {
-   conductionOff();
-  }
+# 167 "main.c"
  }
 }

@@ -31,23 +31,48 @@ def solve(y):
 	
 	return x
 
-conductionAngles=range(1024)
 
-for i in range(0,1024):
-	print i, math.pi / 2 / 1024 * i, solve(math.pi / 2 / 1024 * i)
-	conductionAngles[i]=solve(math.pi / 2 / 1023 * i);
+maxConductionAngle = 10000
+conductionAngles=range(maxConductionAngle)
 
-xvalues = np.arange(0.0, 1024.0, 1)
+for i in range(0,maxConductionAngle):
+	#print i, math.pi / 2 / maxConductionAngle * i, solve(math.pi / 2 / maxConductionAngle * i)
+	conductionAngles[i]=solve(math.pi / 2 / (maxConductionAngle) * i);
+
+xvalues = np.arange(0.0, maxConductionAngle * 1.0, 1)
 xvalues = (xvalues/np.max(xvalues))*100
-print xvalues
-print xvalues.shape
-print len(conductionAngles)
+#print xvalues
+#print xvalues.shape
+#print len(conductionAngles)
+
+table = np.arange(0, 256, 1)
+for i in range(0, 256):
+	j = int(i * maxConductionAngle / 255.0)
+	print i, j
+	if j < 10000:
+		table[i] = conductionAngles[j] / math.pi * 10000;
+	else:
+		table[i] = 10000;
+
+for i in range(0, 256):
+	print table[i], ","
+#	print "conductionAngles[" + str(i) + "] = " + str(table[i]) + ";"
+	
+#print table;
+
+conductionAngles = np.array(conductionAngles)
 
 fig=plt.figure()
 ax = fig.add_subplot(111)
 ax.xaxis.set_minor_locator(MultipleLocator(10))
 ax.grid(True, which='both')
-plt.plot(xvalues, np.degrees(conductionAngles))
+plt.plot(xvalues, conductionAngles/math.pi*10000)
 plt.ylabel("conduction angle, degrees")
 plt.xlabel("power, %")
+
+plt.figure()
+
+plt.plot(range(0, table.shape[0]), table)
 plt.show()
+
+	

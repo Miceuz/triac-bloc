@@ -4,12 +4,15 @@ import matplotlib.pyplot as plt
 import numpy.fft as ff
 from pylab import *
 import scipy.signal as signal
+import scipy as scipy
 
 def magnitude(x):
 	ret = []
 	for sample in x:
 		ret.append(math.sqrt(sample.real**2 + sample.imag**2))
 	return np.array(ret)
+def phase(x):
+	return np.unwrap(arctan2(imag(x),real(x)))
 
 def differential(x):
 	ret = []
@@ -59,8 +62,8 @@ def impz(b,a=1):
 y = np.loadtxt("step-response-linear2.csv")
 y = hstack((np.ones(100)*23.50, y))
 y = y - min(y)
-n = 13
-a = signal.firwin(n, cutoff = 0.037, window = "hamming")
+n = 33
+a = signal.firwin(n, cutoff = 0.037, window = "blackman")
 
 #plt.plot(range(0, (y.shape[0])), y)
 
@@ -68,12 +71,14 @@ yfiltered = signal.lfilter(a, 1, y)[n:]
 irfiltered = differential(yfiltered)
 ir = differential(y)[n:]
 
-plt.plot(range(0, (ir.shape[0])), ir, c="grey")
-plt.plot(range(0, (irfiltered.shape[0])), irfiltered, c="red", linewidth=2)
+plt.plot(range(0, ir.shape[0]), ir, c="grey")
+plt.plot(range(0, irfiltered.shape[0]), irfiltered, c="red", linewidth=2)
+#plt.plot(range(0, irfiltered.shape[0]), signal.medfilt(irfiltered, 15), c="blue", linewidth=1)
 
 irfiltered = np.hstack((np.zeros(1000), irfiltered, np.zeros(1000)))
 ir = np.hstack((np.zeros(10000), ir, np.zeros(10000)))
-#plt.plot(range(0, (ir.shape[0])/2+1), magnitude(ff.rfft(ir)))
+#plt.plot(range(0, (irfiltered.shape[0])/2+1), signal.medfilt(20*scipy.log10(abs(ff.rfft(irfiltered))),5), c="green")
+#plt.plot(range(0, (irfiltered.shape[0])/2+1), phase(ff.rfft(irfiltered)), c="red")
 
 H = abs(ff.rfft(irfiltered))[0:]
 H = H/H.shape[0]

@@ -10,10 +10,8 @@
 #include <avr/eeprom.h>
 #include "usiTwiSlave.h"
 
-#define USI_SCK PA4
-#define USI_MISO PA5
-#define LED_RED PB1
-#define LED_GREEN PB0
+#define GREEN PB0
+#define RED PB1
 
 #define I2C_SET_POWER 1
 #define I2C_SET_CONDUCTION_ANGLE 3
@@ -24,27 +22,25 @@
 #define I2C_READ_LAST_PERIOD_LENGTH 8
 #define I2C_RESET 9
 #define I2C_CALIBRATE 10
-
+#define I2C_ADC 11
 #define reset() wdt_enable(WDTO_15MS); while(1) {}
 
-void conductionOn();
-void conductionOff();
-void setupZCInterrupt();
-void setTimerInterruptAt();
-void stopTimer();
+inline void conductionOn();
+inline void conductionOff();
+inline void setupZCInterrupt();
+inline void setTimerInterruptAt(const uint16_t countTo, const uint8_t nextEvent);
+inline void stopTimer();
 
 #define NEVER 0
 #define EVENT_TRUE_ZC 1
 #define EVENT_CONDUCT 2
 
-volatile uint16_t interruptAt = NEVER;
-
+volatile uint8_t interruptAt = NEVER;
 volatile uint16_t conductionAngle = 9000;
-volatile uint16_t maxConductionAngle = 9800;
+volatile uint16_t newConductionAngle = 9000;
 volatile uint16_t zcPulseLength = 0;
 volatile uint16_t periodLength = 0;
 volatile uint8_t oscAjdustDelayCounter = 0;
-volatile uint16_t newConductionAngle = 9000;
 volatile uint16_t zcInterruptTimestamp = 0;
 extern const uint16_t conductionAngles[256];
 
@@ -57,28 +53,29 @@ extern const uint16_t conductionAngles[256];
 uint8_t zcInterruptEdge = EDGE_LEADING;
 uint8_t powerGood = false;
 uint8_t calibrationGood = false;
+
 volatile uint8_t fadeIn = 1;
+volatile uint8_t j = 255;
 void fadeInOut() {
 	if(fadeIn) {
-		newConductionAngle --;
-		if(newConductionAngle < 8000) {
+		j --;
+		if(j < 254) {
 			fadeIn = !fadeIn;
 		}
 	} else {
-		newConductionAngle ++;
-		if(newConductionAngle > 9999) {
+		j ++;
+		if(j > 254) {
 			fadeIn = !fadeIn;
 		}
 	}
+	newConductionAngle = pgm_read_word(&conductionAngles[j]);
 }
 
 inline void conductionOn() {
-	PORTB |= _BV(PB0);
 	PORTA |= _BV(PA7);
 }
 
 inline void conductionOff() {
-	PORTB &= ~_BV(PB0);
 	PORTA &= ~_BV(PA7);
 }
 
@@ -86,7 +83,7 @@ inline void resetTimer() {
 	TCNT1 = 0;
 }
 
-inline void setTimerInterruptAt(const uint16_t countTo, const uint16_t nextEvent) {
+inline void setTimerInterruptAt(const uint16_t countTo, const uint8_t nextEvent) {
 	TIMSK1 |= _BV(OCIE1A) | _BV(TOIE1);
 	OCR1A = countTo;
 	TCCR1B |= _BV(CS11); //fmcu/8 = 1Mhz == 10000 counts per period
@@ -106,15 +103,15 @@ ISR(TIM1_COMPA_vect) {
 	if(EVENT_TRUE_ZC == interruptAt) {
 		stopTimer();
 		setTimerInterruptAt(TCNT1 + conductionAngle, EVENT_CONDUCT);
-	} else if(EVENT_CONDUCT == interruptAt) {
+	} else {// if(EVENT_CONDUCT == interruptAt)
 		conductionOn();
 	}
 }
 
 ISR(TIM1_OVF_vect) {
+	conductionOff();
+	stopTimer();
 	powerGood = false;
-	PORTB |= _BV(PB1);
-	PORTB &= ~_BV(PB0);
 }
 
 inline void saveCalibration(){
@@ -125,11 +122,12 @@ inline void adjustOscillatorSpeed() {
 	if (oscAjdustDelayCounter++ > 128) {
 		if(periodLength > 10060) {
 			OSCCAL--;
+			calibrationGood = false;
 		} else if(periodLength < 9940){
 			OSCCAL++;
+			calibrationGood = false;
 		} else {
 			calibrationGood = true;
-			saveCalibration();
 		}
 		oscAjdustDelayCounter = 0;
 	}
@@ -140,8 +138,7 @@ volatile int32_t periodFiltered2 = 0;
 
 inline uint16_t filterPeriodLength(int32_t thisPeriodLength) {
 	if(0 != periodFiltered2) {
-		periodFiltered = periodFiltered
-				+ ((thisPeriodLength - periodFiltered) >> 5);
+		periodFiltered = periodFiltered	+ ((thisPeriodLength - periodFiltered) >> 5);
 		periodFiltered2 = periodFiltered2 + ((periodFiltered - periodFiltered2) >> 5);
 	} else {
 		periodFiltered = thisPeriodLength;
@@ -163,7 +160,6 @@ inline void flipZcInterruptEdge() {
 
 //Zero crossing interrupt: collects statistics, restarts the timer - next stop - true zero crossing interrupt
 ISR(EXT_INT0_vect) {
-	PORTB |= _BV(PB0);
 	stopTimer();
 
 	if(EDGE_LEADING == zcInterruptEdge) {
@@ -184,45 +180,76 @@ ISR(EXT_INT0_vect) {
 			zcPulseLength = lastZcPulseLength;
 		}
 	}
-	PORTB &= ~_BV(PB0);
-	PORTB &= ~_BV(PB1);
 	flipZcInterruptEdge();
 	powerGood=1;
 }
 
+inline void ledOn(uint8_t led){
+	PORTB |= _BV(led);
+}
+
+inline void ledOff(uint8_t led){
+	PORTB &= ~_BV(led);
+}
+
+inline void calibrate() {
+	uint8_t calibration = eeprom_read_byte(0x00);
+	if(calibration != 255) {
+		OSCCAL = calibration;
+	}
+
+	while(!calibrationGood) {
+		ledOn(RED);
+		_delay_ms(300);
+		ledOff(RED);
+		ledOn(GREEN);
+		_delay_ms(300);
+		ledOff(GREEN);
+	}
+	eeprom_write_byte(0x00, OSCCAL);
+}
 
 int main (void) {
-	DDRB |= _BV(PB0) | _BV(PB1);
+	MCUSR = 0;
+	wdt_disable();
+	DDRB |= _BV(RED) | _BV(GREEN);
 	PORTB |= _BV(PB2);
 	DDRA |= _BV(PA7);
 	PORTA = 0;
 
-	OSCCAL = 100;
-	//calibrate();
-
 	setupZCInterrupt();
-	sei();
 	usiTwiSlaveInit(0x20);
+	sei();
 
-	PORTB |= _BV(PB0);
-	_delay_ms(100);
-	PORTB &= ~_BV(PB0);
-	_delay_ms(500);
+//	while(!powerGood) {
+//		ledOn(RED);
+//		_delay_ms(100);
+//		ledOff(RED);
+//		_delay_ms(100);
+//	}
+//
+//	calibrate();
 
+	newConductionAngle = pgm_read_word(&conductionAngles[255]);
+
+	DDRA |= _BV(PA0);
+	PORTA |= _BV(PA0);
+
+	ADMUX = _BV(MUX1);
+	ADCSRA = _BV(ADEN) | _BV(ADPS2);
+	ADCSRB = _BV(ADLAR);
 
 	while(1) {
 		if(usiTwiDataInReceiveBuffer()) {
 			uint8_t usiRx = usiTwiReceiveByte();
 			if(I2C_SET_POWER == usiRx) {
-				usiRx = usiTwiReceiveByte();
-				conductionAngle = pgm_read_word(&conductionAngles[usiRx]);
-			} else if (2 == usiRx) {
-				conductionAngle = 2300;
+				newConductionAngle = pgm_read_word(&conductionAngles[usiTwiReceiveByte()]);
 			} else if (I2C_SET_CONDUCTION_ANGLE == usiRx) {
-				usiRx = usiTwiReceiveByte();
-				newConductionAngle = ((uint16_t) usiRx) << 8;
-				usiRx = usiTwiReceiveByte();
-				newConductionAngle |= (((uint16_t) usiRx) & 0x00FF);
+				newConductionAngle = ((uint16_t) usiTwiReceiveByte()) << 8;
+				newConductionAngle |= (((uint16_t) usiTwiReceiveByte()) & 0x00FF);
+//			} else if(I2C_SET_ == usiRx) {
+//				usiRx = usiTwiReceiveByte();
+
 			} else if (I2C_READ_PERIOD_LENGTH == usiRx){
 				usiTwiTransmitByte(periodLength >> 8);
 				usiTwiTransmitByte(periodLength & 0x00FF);
@@ -239,16 +266,18 @@ int main (void) {
 				usiTwiTransmitByte(zcInterruptTimestamp & 0x00FF);
 			} else if (I2C_RESET == usiRx) {
 				reset();
-			} else {
-//				while(usiTwiDataInReceiveBuffer()) {
-//					usiTwiReceiveByte();
-//				}
 			}
-//			_delay_ms(100);
-//			PORTB |= _BV(PB0);
-//			_delay_ms(100);
-//			PORTB &= ~_BV(PB0);
+		}
 
+		ADCSRA |= _BV(ADSC);
+		while(ADCSRA & _BV(ADSC));
+		newConductionAngle = pgm_read_word(&conductionAngles[ADCH]);
+
+		if(!powerGood) {
+			ledOn(RED);
+			_delay_ms(100);
+			ledOff(RED);
+			_delay_ms(100);
 		}
 	}
 }
