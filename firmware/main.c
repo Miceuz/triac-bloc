@@ -13,16 +13,54 @@
 #define GREEN PB0
 #define RED PB1
 
+/*
+ * Sets the linear output power. 1 byte argument: [0 - 255]
+ */
 #define I2C_SET_POWER 1
+/*
+ * Directly sets the conduction angle. 2 bytes argument: [0 - 1000]
+ */
 #define I2C_SET_CONDUCTION_ANGLE 3
+/*
+ * Returns 2 bytes of filtered period length, represents the number of
+ * internal timer ticks between two zero crossings.
+ * Should be around 10000.
+ * */
 #define I2C_READ_PERIOD_LENGTH 4
+/**
+ * Returns 2 bytes of zero crossing pulse length.
+ */
 #define I2C_READ_ZC_PULSE_LENGHT 5
+/**
+ * Returns the 1 byte value of processor speed calibration register.
+ */
 #define I2C_READ_OSCCAL 6
+/**
+ * Returns 2 bytes of currently set conduction angle [0 - 10000]
+ */
 #define I2C_READ_CONDUCTION_ANGLE 7
+/*
+ * Returns 2 bytes of last period length, represents the number of
+ * internal timer ticks between two zero crossings.
+ * Should be around 10000.
+ * */
 #define I2C_READ_LAST_PERIOD_LENGTH 8
+/**
+ * Resets the Triac Bloc
+ */
 #define I2C_RESET 9
+/**
+ * Starts the calibration routine.
+ * Red and green leds blink alternatingly while calibration is in progress.
+ * Might take a while.
+ */
 #define I2C_CALIBRATE 10
 #define I2C_ADC 11
+/**
+ * A routine for testing I2C connection. Both red and green leds will light up for a second.
+ */
+#define I2C_TEST 12
+
 #define reset() wdt_enable(WDTO_15MS); while(1) {}
 
 inline void conductionOn();
@@ -247,9 +285,6 @@ int main (void) {
 			} else if (I2C_SET_CONDUCTION_ANGLE == usiRx) {
 				newConductionAngle = ((uint16_t) usiTwiReceiveByte()) << 8;
 				newConductionAngle |= (((uint16_t) usiTwiReceiveByte()) & 0x00FF);
-//			} else if(I2C_SET_ == usiRx) {
-//				usiRx = usiTwiReceiveByte();
-
 			} else if (I2C_READ_PERIOD_LENGTH == usiRx){
 				usiTwiTransmitByte(periodLength >> 8);
 				usiTwiTransmitByte(periodLength & 0x00FF);
@@ -266,12 +301,16 @@ int main (void) {
 				usiTwiTransmitByte(zcInterruptTimestamp & 0x00FF);
 			} else if (I2C_RESET == usiRx) {
 				reset();
+			} else if(I2C_CALIBRATE == usiRx) {
+				calibrate();
+			} else if(I2C_TEST == usiRx) {
+				ledOn(RED);
+				ledOn(GREEN);
+				_delay_ms(2000);
+				ledOff(RED);
+				ledOff(GREEN);
 			}
 		}
-
-		ADCSRA |= _BV(ADSC);
-		while(ADCSRA & _BV(ADSC));
-		newConductionAngle = pgm_read_word(&conductionAngles[ADCH]);
 
 		if(!powerGood) {
 			ledOn(RED);
@@ -279,5 +318,6 @@ int main (void) {
 			ledOff(RED);
 			_delay_ms(100);
 		}
+		ledOff(GREEN);
 	}
 }

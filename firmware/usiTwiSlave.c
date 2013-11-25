@@ -538,7 +538,6 @@ Only disabled when waiting for a new Start Condition.
 
 ISR( USI_OVERFLOW_VECTOR )
 {
-
   switch ( overflowState )
   {
 
