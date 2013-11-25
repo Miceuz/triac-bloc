@@ -1,2 +1,6 @@
 /Release
 /Debug
+*.o
+*.i
+*.s
+*.elf
