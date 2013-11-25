@@ -1,0 +1,2 @@
+Power resistors on AC side - 4 * 8.2k=32.8k
+Pullup @ optocoupler output - 47k

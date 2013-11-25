@@ -1,0 +1,2 @@
+Power resistors 16.4k
+Pullup 10k
