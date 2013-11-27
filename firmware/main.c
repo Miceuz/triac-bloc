@@ -103,7 +103,7 @@ volatile uint8_t j = 255;
 void fadeInOut() {
 	if(fadeIn) {
 		j --;
-		if(j < 254) {
+		if(j < 1) {
 			fadeIn = !fadeIn;
 		}
 	} else {
@@ -221,7 +221,6 @@ inline uint16_t getNewConductionAngle() {
 		}
 
 		if(relayOnCycles++ >= relayOutputPower) {
-			relayOnCycles = 0;
 			return 9000;//min power
 		} else {
 			return 0;//max power
