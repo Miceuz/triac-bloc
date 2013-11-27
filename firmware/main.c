@@ -14,9 +14,15 @@
 #define RED PB1
 
 /*
- * Sets the linear output power. 1 byte argument: [0 - 255]
+ * Sets the linear output power in dimmer mode. 1 byte argument: [0 - 255]
  */
-#define I2C_SET_POWER 1
+#define I2C_SET_DIMMER_POWER 1
+/*
+ * Sets the linear output power in relay mode. 1 byte argument: [0 - 255]
+ * In relay mode conduction is switched on after each ZC for the whole period {relayOutputPower} times in a row out of RELAY_MAX_POWER
+ * thus, imitating a dimmer without causing electrical noise.
+ */
+#define I2C_SET_RELAY_POWER 2
 /*
  * Directly sets the conduction angle. 2 bytes argument: [0 - 1000]
  */
@@ -146,6 +152,7 @@ ISR(TIM1_COMPA_vect) {
 	}
 }
 
+//Timer overflow means - there is no ZC interrupt happening and setting up EVENT_TRUE_ZC timer.
 ISR(TIM1_OVF_vect) {
 	conductionOff();
 	stopTimer();
@@ -196,6 +203,32 @@ inline void flipZcInterruptEdge() {
 	MCUCR = MCUCR ^ 1; //flip last bit, changing the edge for the next intettupt
 }
 
+#define MODE_DIMMER 1
+#define MODE_RELAY  2
+#define RELAY_MAX_CYCLES 255
+
+uint8_t relayOnCycles = 0;
+uint8_t mode = MODE_DIMMER;
+uint8_t relayOutputPower = 0;
+
+inline uint16_t getNewConductionAngle() {
+	if(MODE_DIMMER == mode) {
+		return newConductionAngle;
+	} else {
+		//MODE_RELAY
+		if(relayOnCycles > RELAY_MAX_CYCLES) {
+			relayOnCycles = 0;
+		}
+
+		if(relayOnCycles++ >= relayOutputPower) {
+			relayOnCycles = 0;
+			return 9000;//min power
+		} else {
+			return 0;//max power
+		}
+	}
+}
+
 //Zero crossing interrupt: collects statistics, restarts the timer - next stop - true zero crossing interrupt
 ISR(EXT_INT0_vect) {
 	stopTimer();
@@ -207,9 +240,9 @@ ISR(EXT_INT0_vect) {
 		periodLength = filterPeriodLength(TCNT1);
 		zcInterruptTimestamp = TCNT1;
 		resetTimer();
+		conductionAngle = getNewConductionAngle();
 		setTimerInterruptAt(zcPulseLength >> 1, EVENT_TRUE_ZC);
 		adjustOscillatorSpeed();
-		conductionAngle = newConductionAngle;
 	} else {
 		uint8_t lastZcPulseLength = TCNT1;
 		continueTimer();
@@ -259,15 +292,6 @@ int main (void) {
 	usiTwiSlaveInit(0x20);
 	sei();
 
-//	while(!powerGood) {
-//		ledOn(RED);
-//		_delay_ms(100);
-//		ledOff(RED);
-//		_delay_ms(100);
-//	}
-//
-//	calibrate();
-
 	newConductionAngle = pgm_read_word(&conductionAngles[255]);
 
 	DDRA |= _BV(PA0);
@@ -280,8 +304,14 @@ int main (void) {
 	while(1) {
 		if(usiTwiDataInReceiveBuffer()) {
 			uint8_t usiRx = usiTwiReceiveByte();
-			if(I2C_SET_POWER == usiRx) {
-				newConductionAngle = pgm_read_word(&conductionAngles[usiTwiReceiveByte()]);
+			if(I2C_SET_DIMMER_POWER == usiRx) {
+				newConductionAngle = pgm_read_word(&conductionAngles[255 - usiTwiReceiveByte()]);
+				mode = MODE_DIMMER;
+			} else if(I2C_SET_RELAY_POWER == usiRx) {
+				newConductionAngle = pgm_read_word(&conductionAngles[255]);
+				relayOnCycles = 0;
+				relayOutputPower = usiTwiReceiveByte();
+				mode = MODE_RELAY;
 			} else if (I2C_SET_CONDUCTION_ANGLE == usiRx) {
 				newConductionAngle = ((uint16_t) usiTwiReceiveByte()) << 8;
 				newConductionAngle |= (((uint16_t) usiTwiReceiveByte()) & 0x00FF);
