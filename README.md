@@ -1,7 +1,7 @@
 triac-bloc
 ==========
 
-An universal power block based on triac. In essence this is a solid state relay that can be augmented with some bells and whistles. 
+A universal power block based on triac. In essence this is a solid state relay that can be augmented with some bells and whistles. 
 
 Bells and whistles:
  * Attiyny44 MCU on board
