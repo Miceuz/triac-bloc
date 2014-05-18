@@ -205,6 +205,7 @@ inline void flipZcInterruptEdge() {
 
 #define MODE_DIMMER 1
 #define MODE_RELAY  2
+#define MODE_MANUAL 3
 #define RELAY_MAX_CYCLES 255
 
 uint8_t relayOnCycles = 0;
@@ -214,8 +215,7 @@ uint8_t relayOutputPower = 0;
 inline uint16_t getNewConductionAngle() {
 	if(MODE_DIMMER == mode) {
 		return newConductionAngle;
-	} else {
-		//MODE_RELAY
+	} else if(MODE_RELAY == mode) {
 		if(relayOnCycles > RELAY_MAX_CYCLES) {
 			relayOnCycles = 0;
 		}
@@ -225,7 +225,14 @@ inline uint16_t getNewConductionAngle() {
 		} else {
 			return 0;//max power
 		}
-	}
+	} else if(MODE_MANUAL == mode) {
+                ADCSRA |= _BV(ADSC);
+                while(ADCSRA & _BV(ADSC)) {
+                        //WAIT
+                }       
+                uint16_t condAngle = pgm_read_word(&conductionAngles[255 - ADCH]);
+                return condAngle;
+        }
 }
 
 //Zero crossing interrupt: collects statistics, restarts the timer - next stop - true zero crossing interrupt
@@ -286,17 +293,45 @@ uint8_t readAddressSetting() {
 	return ~PINA & 0b00001111;
 }
 
+/**
+ * Manual mode is detected if MOSI/SDA pin is shorted to ground
+ * */
+static uint8_t isManualMode() {
+        DDRA &= ~_BV(PA6);
+        PORTA |= _BV(PA6);
+        asm("nop");
+        uint8_t isManualMode = !(PINA & _BV(PA6));
+        PORTA &= ~_BV(PA6);
+        return isManualMode;
+}
+
 int main (void) {
 	MCUSR = 0;
 	wdt_disable();
 	DDRB |= _BV(RED) | _BV(GREEN);
-	PORTB |= _BV(PB2);
-	DDRA |= _BV(PA7);
+	PORTB |= _BV(PB2); //zc pullup
+
+	DDRA |= _BV(PA7);  //fire output
 	PORTA = 0;
 
-	setupZCInterrupt();
+        if(isManualMode()) {
+                //pot is expected to be connected to
+                //1 GND
+                //2 PA2/ADC2 - wiper
+                //3 PA0
+                DDRA |= _BV(PA0);
+                PORTA |= _BV(PA0); //set up high level on PA0 for positive pot leg
+                
+                ADMUX = 2;
+                ADCSRA = _BV(ADEN) | _BV(ADPS2);
+                ADCSRB = _BV(ADLAR);
+                ledOn(GREEN);
+                mode = MODE_MANUAL;
+        } else {
+                usiTwiSlaveInit(0x20 + readAddressSetting());
+        }
 
-	usiTwiSlaveInit(0x20 + readAddressSetting());
+	setupZCInterrupt();
 	sei();
 
 	newConductionAngle = pgm_read_word(&conductionAngles[255]);
@@ -348,6 +383,10 @@ int main (void) {
 			ledOff(RED);
 			_delay_ms(100);
 		}
-		ledOff(GREEN);
+                //~ if(PINA & _BV(PA6)) {
+                        //~ ledOn(GREEN);
+                //~ } else {
+                        //~ ledOff(GREEN);
+                //~ }
 	}
 }
