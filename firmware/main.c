@@ -279,6 +279,13 @@ inline void calibrate() {
 	eeprom_write_byte(0x00, OSCCAL);
 }
 
+uint8_t readAddressSetting() {
+	DDRA &= 0b11110000;
+	PORTA |= 0b00001111;
+	_delay_ms(100);
+	return ~PINA & 0b00001111;
+}
+
 int main (void) {
 	MCUSR = 0;
 	wdt_disable();
@@ -288,17 +295,11 @@ int main (void) {
 	PORTA = 0;
 
 	setupZCInterrupt();
-	usiTwiSlaveInit(0x20);
+
+	usiTwiSlaveInit(0x20 + readAddressSetting());
 	sei();
 
 	newConductionAngle = pgm_read_word(&conductionAngles[255]);
-
-	DDRA |= _BV(PA0);
-	PORTA |= _BV(PA0);
-
-	ADMUX = _BV(MUX1);
-	ADCSRA = _BV(ADEN) | _BV(ADPS2);
-	ADCSRB = _BV(ADLAR);
 
 	while(1) {
 		if(usiTwiDataInReceiveBuffer()) {
