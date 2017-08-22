@@ -1,241 +1,395 @@
-Cmp-Mod V01 Created by CvPcb (2013-mar-13)-testing date = Fri 03 May 2013 09:37:14 PM CEST
+Cmp-Mod V01 Created by PcbNew   date = Wed 09 Aug 2017 08:17:02 PM EEST
 
 BeginCmp
-TimeStamp = /511F7F96;
-Reference = C1;
-ValeurCmp = 10nF 400V;
-IdModule  = rc-master-C100-140X060;
+TimeStamp = 598B4509
+Path = 
+Reference = REF**;
+ValeurCmp = EuroBoard_halb_Type-I_100mmX80mm_holes;
+IdModule  = EuroBoard_Outline:EuroBoard_halb_Type-I_100mmX80mm_holes;
 EndCmp
 
 BeginCmp
-TimeStamp = /51602650;
-Reference = C2;
-ValeurCmp = 47nF 400V;
-IdModule  = rc-master-C150-190X070;
+TimeStamp = 5638705E
+Path = /511F7E96
+Reference = R1;
+ValeurCmp = 360R;
+IdModule  = w_pth_resistors:R12x5.2;
 EndCmp
 
 BeginCmp
-TimeStamp = /51601848;
-Reference = C3;
-ValeurCmp = 100nF 400V;
-IdModule  = rc-master-C150-190X070;
+TimeStamp = 516138D1
+Path = /511F7BC7
+Reference = U2;
+ValeurCmp = BTA41;
+IdModule  = w_to:top3;
 EndCmp
 
 BeginCmp
-TimeStamp = /516A4F31;
-Reference = C4;
-ValeurCmp = 100nF;
-IdModule  = -C0603;
-EndCmp
-
-BeginCmp
-TimeStamp = /516A50F4;
-Reference = C5;
-ValeurCmp = 100uF;
-IdModule  = rc-master-CE-035X100;
-EndCmp
-
-BeginCmp
-TimeStamp = /5183F45A;
-Reference = C6;
-ValeurCmp = C;
-IdModule  = c_0603;
-EndCmp
-
-BeginCmp
-TimeStamp = /516A4B29;
-Reference = CON1;
-ValeurCmp = AVR-ISP-6;
-IdModule  = atmel-AVR-ISP-6;
-EndCmp
-
-BeginCmp
-TimeStamp = /51840F81;
-Reference = D1;
-ValeurCmp = LED;
-IdModule  = SM0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /51840FAE;
-Reference = D2;
-ValeurCmp = LED;
-IdModule  = SM0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /511F7D38;
+TimeStamp = 516138A1
+Path = /511F7D38
 Reference = F1;
 ValeurCmp = FUSE;
 IdModule  = Fuseholder5x20_horiz_open_universal_Type-III;
 EndCmp
 
 BeginCmp
-TimeStamp = /5169798E;
-Reference = IC1;
-ValeurCmp = ATTINY44-SS;
-IdModule  = -SO-14;
+TimeStamp = 51871BD5
+Path = /563617C2
+Reference = CONN10;
+ValeurCmp = CONN_01X06;
+IdModule  = PINHEAD1-6;
 EndCmp
 
 BeginCmp
-TimeStamp = /511F7ED4;
-Reference = L1;
-ValeurCmp = 40-100uH;
-IdModule  = Choke_Toroid_8x16mm_Vertical;
-EndCmp
-
-BeginCmp
-TimeStamp = /511F854D;
+TimeStamp = 516138F3
+Path = /511F854D
 Reference = P1;
 ValeurCmp = CONN_4;
 IdModule  = connect-SC-04;
 EndCmp
 
 BeginCmp
-TimeStamp = /516976FE;
-Reference = P2;
-ValeurCmp = CONTACT;
-IdModule  = HOLE_60;
-EndCmp
-
-BeginCmp
-TimeStamp = /5169770B;
-Reference = P3;
-ValeurCmp = CONTACT;
-IdModule  = HOLE_60;
-EndCmp
-
-BeginCmp
-TimeStamp = /51697711;
-Reference = P4;
-ValeurCmp = CONTACT;
-IdModule  = HOLE_60;
-EndCmp
-
-BeginCmp
-TimeStamp = /51698020;
+TimeStamp = 5169803F
+Path = /51698020
 Reference = P6;
 ValeurCmp = CONN_4;
 IdModule  = connect-SC-04;
 EndCmp
 
 BeginCmp
-TimeStamp = /516B0787;
-Reference = Q1;
-ValeurCmp = MOSFET_N;
-IdModule  = -SOT23;
+TimeStamp = 51613893
+Path = /511F7ED4
+Reference = L1;
+ValeurCmp = 40-100uH;
+IdModule  = Choke_Toroid_8x16mm_Vertical;
 EndCmp
 
 BeginCmp
-TimeStamp = /511F7E96;
-Reference = R1;
-ValeurCmp = 360R;
-IdModule  = Resistor_Horizontal_RM20mm;
+TimeStamp = 516137B5
+Path = /511F7F69
+Reference = VR1;
+ValeurCmp = VR;
+IdModule  = varistor-S05K40;
 EndCmp
 
 BeginCmp
-TimeStamp = /511F837C;
-Reference = R2;
-ValeurCmp = 200R;
-IdModule  = rc-master-R0603;
-EndCmp
-
-BeginCmp
-TimeStamp = /511F7F8E;
-Reference = R3;
-ValeurCmp = 39;
-IdModule  = Resistor_Horizontal_RM15mm;
-EndCmp
-
-BeginCmp
-TimeStamp = /511F8128;
-Reference = R4;
-ValeurCmp = 8.2k 5W;
-IdModule  = Resistor_Horizontal_RM30mm;
-EndCmp
-
-BeginCmp
-TimeStamp = /511F812E;
-Reference = R5;
-ValeurCmp = 8.2k 5W;
-IdModule  = Resistor_Horizontal_RM30mm;
-EndCmp
-
-BeginCmp
-TimeStamp = /51602617;
-Reference = R6;
-ValeurCmp = 470R;
-IdModule  = Resistor_Horizontal_RM15mm;
-EndCmp
-
-BeginCmp
-TimeStamp = /516986E3;
-Reference = R7;
-ValeurCmp = R;
-IdModule  = -R0603;
-EndCmp
-
-BeginCmp
-TimeStamp = /516A9D39;
-Reference = R8;
-ValeurCmp = 510k;
-IdModule  = Resistor_Horizontal_RM15mm;
-EndCmp
-
-BeginCmp
-TimeStamp = /516B0880;
-Reference = R9;
-ValeurCmp = 10k;
-IdModule  = -R0603;
-EndCmp
-
-BeginCmp
-TimeStamp = /516B0869;
-Reference = R10;
-ValeurCmp = R;
-IdModule  = -R0603;
-EndCmp
-
-BeginCmp
-TimeStamp = /51840FC2;
-Reference = R11;
-ValeurCmp = R;
-IdModule  = SM0603;
-EndCmp
-
-BeginCmp
-TimeStamp = /51840FC9;
-Reference = R12;
-ValeurCmp = R;
-IdModule  = SM0603;
-EndCmp
-
-BeginCmp
-TimeStamp = /511F7BD6;
+TimeStamp = 516F9CB8
+Path = /511F7BD6
 Reference = U1;
 ValeurCmp = MOC-3052;
 IdModule  = optocoupler-2-DIL06;
 EndCmp
 
 BeginCmp
-TimeStamp = /511F7BC7;
-Reference = U2;
-ValeurCmp = TRIAC;
-IdModule  = -TOP3;
+TimeStamp = 5169802E
+Path = /5169798E
+Reference = IC1;
+ValeurCmp = ATTINY44-SS;
+IdModule  = -SO-14;
 EndCmp
 
 BeginCmp
-TimeStamp = /51603500;
+TimeStamp = 516A4D16
+Path = /516A4F31
+Reference = C4;
+ValeurCmp = 1u;
+IdModule  = -C0603;
+EndCmp
+
+BeginCmp
+TimeStamp = 5184081E
+Path = /5183F45A
+Reference = C6;
+ValeurCmp = C;
+IdModule  = c_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = 51845C9A
+Path = /51840F81
+Reference = D1;
+ValeurCmp = LED;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 51845CA7
+Path = /51840FAE
+Reference = D2;
+ValeurCmp = LED;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 56380201
+Path = /56331C4F
+Reference = C8;
+ValeurCmp = 1n;
+IdModule  = w_smd_cap:c_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = 5638020D
+Path = /5633226E
+Reference = D3;
+ValeurCmp = 1N4148;
+IdModule  = Diodes_SMD:SOD-323;
+EndCmp
+
+BeginCmp
+TimeStamp = 56380219
+Path = /56331D39
+Reference = D4;
+ValeurCmp = 1N4148;
+IdModule  = Diodes_SMD:SOD-323;
+EndCmp
+
+BeginCmp
+TimeStamp = 56380225
+Path = /56331DC2
+Reference = D5;
+ValeurCmp = 1N4148;
+IdModule  = Diodes_SMD:SOD-323;
+EndCmp
+
+BeginCmp
+TimeStamp = 56380231
+Path = /56331E2D
+Reference = D6;
+ValeurCmp = 1N4148;
+IdModule  = Diodes_SMD:SOD-323;
+EndCmp
+
+BeginCmp
+TimeStamp = 5638023D
+Path = /56331F32
+Reference = D7;
+ValeurCmp = 1N4148;
+IdModule  = Diodes_SMD:SOD-323;
+EndCmp
+
+BeginCmp
+TimeStamp = 5638024B
+Path = /56332304
+Reference = Q2;
+ValeurCmp = 2N3904;
+IdModule  = w_smd_trans:sot23;
+EndCmp
+
+BeginCmp
+TimeStamp = 5638024C
+Path = /56333627
+Reference = R2;
+ValeurCmp = 4.7k;
+IdModule  = w_smd_resistors:r_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = 56380262
+Path = /5633244A
+Reference = R4;
+ValeurCmp = 1k;
+IdModule  = w_smd_resistors:r_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = 5638026D
+Path = /56331FC8
+Reference = R5;
+ValeurCmp = 22k;
+IdModule  = w_smd_resistors:r_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = 56380283
+Path = /516986E3
+Reference = R7;
+ValeurCmp = 10k;
+IdModule  = w_smd_resistors:r_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = 5638028E
+Path = /516B0880
+Reference = R9;
+ValeurCmp = 10k;
+IdModule  = w_smd_resistors:r_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = 56380299
+Path = /516B0869
+Reference = R10;
+ValeurCmp = 200;
+IdModule  = w_smd_resistors:r_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = 563802A4
+Path = /51840FC2
+Reference = R11;
+ValeurCmp = 220;
+IdModule  = w_smd_resistors:r_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = 563802AF
+Path = /51840FC9
+Reference = R12;
+ValeurCmp = 220;
+IdModule  = w_smd_resistors:r_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = 563802D2
+Path = /563323A3
 Reference = U3;
-ValeurCmp = LTV-814;
-IdModule  = optocoupler-2-SO-4;
+ValeurCmp = 4N35;
+IdModule  = w_smd_dil:mdip_6;
 EndCmp
 
 BeginCmp
-TimeStamp = /511F7F69;
-Reference = VR1;
-ValeurCmp = VR;
-IdModule  = varistor-S05K40;
+TimeStamp = 563802D1
+Path = /56331BD8
+Reference = R14;
+ValeurCmp = 220k;
+IdModule  = w_smd_resistors:r_2010;
+EndCmp
+
+BeginCmp
+TimeStamp = 563802C5
+Path = /56331ACB
+Reference = R13;
+ValeurCmp = 220k;
+IdModule  = w_smd_resistors:r_2010;
+EndCmp
+
+BeginCmp
+TimeStamp = 5638179C
+Path = /5636341F
+Reference = Q1;
+ValeurCmp = 2N3904;
+IdModule  = w_smd_trans:sot23;
+EndCmp
+
+BeginCmp
+TimeStamp = 563817B4
+Path = /56363959
+Reference = R15;
+ValeurCmp = 1k;
+IdModule  = w_smd_resistors:r_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = 516F2CF8
+Path = /516A9D39
+Reference = R8;
+ValeurCmp = 510k;
+IdModule  = w_pth_resistors:RC05;
+EndCmp
+
+BeginCmp
+TimeStamp = 56387074
+Path = /51602617
+Reference = R6;
+ValeurCmp = 470R;
+IdModule  = w_pth_resistors:R12x5.2;
+EndCmp
+
+BeginCmp
+TimeStamp = 56387282
+Path = /511F7F96
+Reference = C1;
+ValeurCmp = 10nF 400V;
+IdModule  = Capacitors_ThroughHole:C_Rect_L13_W4_P10;
+EndCmp
+
+BeginCmp
+TimeStamp = 56387051
+Path = /51601848
+Reference = C3;
+ValeurCmp = 100nF 400V;
+IdModule  = Capacitors_ThroughHole:C_Rect_L18_W5_P15;
+EndCmp
+
+BeginCmp
+TimeStamp = 56387069
+Path = /511F7F8E
+Reference = R3;
+ValeurCmp = 39;
+IdModule  = w_pth_resistors:RC07;
+EndCmp
+
+BeginCmp
+TimeStamp = 56387044
+Path = /51602650
+Reference = C2;
+ValeurCmp = 47nF 400V;
+IdModule  = Capacitors_ThroughHole:C_Rect_L18_W5_P15;
+EndCmp
+
+BeginCmp
+TimeStamp = 563801F5
+Path = /563321D6
+Reference = C7;
+ValeurCmp = 10u;
+IdModule  = w_capacitors:CP_5x11mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 563801E5
+Path = /516A50F4
+Reference = C5;
+ValeurCmp = 100uF;
+IdModule  = w_capacitors:CP_5x11mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 5984BF89
+Path = /5640407F
+Reference = C9;
+ValeurCmp = 1u;
+IdModule  = Capacitors_SMD:C_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = 5984BFAC
+Path = /56370CB2
+Reference = IC2;
+ValeurCmp = ATTINY441-SSU;
+IdModule  = Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 5984BFB8
+Path = /56403308
+Reference = R16;
+ValeurCmp = 0R;
+IdModule  = w_smd_resistors:r_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = 5984BFC4
+Path = /56402E96
+Reference = R17;
+ValeurCmp = 120;
+IdModule  = w_smd_resistors:r_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = 59851C48
+Path = /5640132A
+Reference = U4;
+ValeurCmp = SP3485EN;
+IdModule  = Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 59852D58
+Path = /516A4B29
+Reference = CON1;
+ValeurCmp = AVR-ISP-6;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x03_Pitch2.54mm;
 EndCmp
 
 EndListe

@@ -1,0 +1,43 @@
+Ref,Qnty,Value,Footprint,Manufacturer,PartNo,Distributor,,
+"C1, ",1,10nF 400V,Capacitors_ThroughHole:C_Rect_L13_W4_P10,Kemet,R46KF210050N0K,Farnell/1679293,0.35,0.35
+"C2, ",1,47nF 400V,Capacitors_ThroughHole:C_Rect_L13_W6_H12_P10,Kemet,R46KI24705001K,Farnell/1679306,0.25,0.25
+"C3, ",1,100nF 400V,Capacitors_ThroughHole:C_Rect_L13_W6_H12_P10,VISHAY BC COMPONENTS,BFC233922104,Farnell/1413837,0.2,0.2
+"C4, ",1,100nF,-C0603,,,,0.01,0.01
+"C5, ",1,100uF,Capacitors_Elko_ThroughHole:Elko_vert_11.2x7.5mm_RM2.5_CopperClear,?,?,?,0.01,0.01
+"C6, ",1,C,c_0603,?,?,?,0.2,0.2
+"C7, ",1,10u,Capacitors_Elko_ThroughHole:Elko_vert_11.2x7.5mm_RM2.5_CopperClear,?,?,?,0.2,0.2
+"C8, ",1,1n,w_smd_cap:c_0603,?,?,?,0.01,0.01
+"CON1, ",1,AVR-ISP-6,atmel-AVR-ISP-6,?,?,?,0,0
+"CONN10, ",1,CONN_01X06,,,,,0,0
+"D1, D2, ",2,LED,SM0805,?,?,?,0.2,0.4
+"D4, D5, D6, D7, D3, ",5,1N4148,Diodes_SMD:SOD-323,?,?,?,0.053,0.265
+"F1, ",1,FUSE,Fuse,Littelfuse Inc.,0314030.MXP,Farnell/1596783,0.79,0.79
+,2,FUSE HOLDER,Fuse holder,,,Farnell/1608255,0.87,1.74
+"IC1, ",1,ATTINY44-SS,-SO-14,?,?,?,0.9,0.9
+"L1, ",1,40-100uH,Choke_Toroid_8x16mm_Vertical,?,?,?,0,0
+"P1, P6, ",2,CONN_4,connect-SC-04,?,?,?,0,0
+"P2, P3, P4, ",3,CONTACT,HOLE_60,?,?,?,0,0
+"Q2, Q1, ",2,2N3904,w_smd_trans:sot23,DIODES INC.,MMBT3904-7-F,Farnell/1773602,0.057,0.114
+"R1, ",1,360R,w_pth_resistors:R15.5x6,TE CONNECTIVITY,CFR200J390R,Farnell/2329590,0.164,0.164
+"R2, ",1,4.7k,w_smd_resistors:r_0603,?,?,?,0.01,0.01
+"R3, ",1,39,w_pth_resistors:RC05,WELWYN,MFP1-39R JI,Farnell/1565385,0.091,0.091
+"R4, R15, ",2,1k,w_smd_resistors:r_0603,?,?,?,0.01,0.02
+"R5, ",1,22k,w_smd_resistors:r_0603,?,?,?,0.01,0.01
+"R6, ",1,470R,w_pth_resistors:R12x5.2,TE CONNECTIVITY,CFR100J470R,Farnell/2329459,0.104,0.104
+"R7, R11, R12, ",3,R,w_smd_resistors:r_0603,?,?,?,0.01,0.03
+"R8, ",1,510k,w_pth_resistors:RC05,MULTICOMP,MF50 510K,Farnell/9340700,0.016,0.016
+"R9, ",1,10k,w_smd_resistors:r_0603,?,?,?,0.01,0.01
+"R10, ",1,200,w_smd_resistors:r_0603,?,?,?,0.01,0.01
+"R13, R14, ",2,220k,w_smd_resistors:r_2010,MULTICOMP,MCPWR10FTEQ2203,Farnell/1887681RL,0.114,0.228
+"U1, ",1,MOC-3052,optocoupler-2-DIL06,FAIRCHILD SEMICONDUCTOR,MOC3052M,Farnell/1086680,0.51,0.51
+"U2, ",1,BTA41,w_to:top3,STMicroelectronics,BTA41-600BRG,Farnell/1057288,6.29,6.29
+"U3, ",1,4N35,w_smd_dil:mdip_6,FAIRCHILD SEMICONDUCTOR,4N35S-M..,Farnell/1021179,0.26,0.26
+"VR1, ",1,VR,varistor-S05K40,MULTICOMP,MCSR431K07DS,Farnell/1856861,0.177,0.177
+,,,,,,,Parts,16.17649
+,,,,,,,,
+,,,,,,,Parts,16.17649
+,,,,,,,PCB,1
+,,,,,,,Assembly,2
+,,,,,,,Total,19.17649
+,,,,,,,Distributor,30.682384
+,,,,,,,Retail,49.0918144

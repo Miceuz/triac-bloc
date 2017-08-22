@@ -1,0 +1,1103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/miceuz/Xaltura/triac-bloc/ssr.sch</source>
+    <date>Sun 01 Nov 2015 06:47:00 PM EET</date>
+    <tool>Eeschema 0.201510281901+6285~30~ubuntu14.04.1-product</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date>13 may 2013</date>
+        <source>ssr.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="U2">
+      <value>BTA41</value>
+      <footprint>w_to:top3</footprint>
+      <datasheet>http://www.st.com/web/en/resource/technical/document/datasheet/CD00002263.pdf</datasheet>
+      <fields>
+        <field name="PartNo">BTA41-600BRG</field>
+        <field name="Manufacturer">STMicroelectronics</field>
+        <field name="Distributor">Farnell/1057288</field>
+      </fields>
+      <libsource lib="device" part="TRIAC"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>511F7BC7</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>MOC-3052</value>
+      <footprint>optocoupler-2-DIL06</footprint>
+      <datasheet>http://www.farnell.com/datasheets/1964329.pdf</datasheet>
+      <fields>
+        <field name="PartNo">MOC3052M</field>
+        <field name="Manufacturer">FAIRCHILD SEMICONDUCTOR</field>
+        <field name="Distributor">Farnell/1086680</field>
+      </fields>
+      <libsource lib="ssr-rescue" part="OPTO-TRIAC-RESCUE-ssr"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>511F7BD6</tstamp>
+    </comp>
+    <comp ref="F1">
+      <value>FUSE</value>
+      <footprint>Fuseholder5x20_horiz_open_universal_Type-III</footprint>
+      <datasheet>http://www.littelfuse.com/~/media/electronics/datasheets/fuses/littelfuse_fuse_314_324_datasheet.pdf.pdf</datasheet>
+      <fields>
+        <field name="PartNo">0314030.MXP</field>
+        <field name="Manufacturer">Littelfuse Inc.</field>
+        <field name="Distributor">Farnell/1596783</field>
+      </fields>
+      <libsource lib="device" part="FUSE"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>511F7D38</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>360R</value>
+      <footprint>w_pth_resistors:R15.5x6</footprint>
+      <datasheet>http://www.farnell.com/cad/1723196.pdf</datasheet>
+      <fields>
+        <field name="PartNo">CFR200J390R</field>
+        <field name="Manufacturer">TE CONNECTIVITY</field>
+        <field name="Distributor">Farnell/2329590</field>
+      </fields>
+      <libsource lib="ssr-rescue" part="R-RESCUE-ssr"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>511F7E96</tstamp>
+    </comp>
+    <comp ref="L1">
+      <value>40-100uH</value>
+      <footprint>Choke_Toroid_8x16mm_Vertical</footprint>
+      <fields>
+        <field name="PartNo">?</field>
+        <field name="Manufacturer">?</field>
+        <field name="Distributor">?</field>
+      </fields>
+      <libsource lib="device" part="INDUCTOR"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>511F7ED4</tstamp>
+    </comp>
+    <comp ref="VR1">
+      <value>VR</value>
+      <footprint>varistor-S05K40</footprint>
+      <datasheet>http://www.farnell.com/datasheets/1872094.pdf</datasheet>
+      <fields>
+        <field name="PartNo">MCSR431K07DS</field>
+        <field name="Manufacturer">MULTICOMP</field>
+        <field name="Distributor">Farnell/1856861</field>
+      </fields>
+      <libsource lib="device" part="VR"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>511F7F69</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>39</value>
+      <footprint>w_pth_resistors:RC05</footprint>
+      <datasheet>http://www.farnell.com/datasheets/1851677.pdf</datasheet>
+      <fields>
+        <field name="PartNo">MFP1-39R JI</field>
+        <field name="Manufacturer">WELWYN</field>
+        <field name="Distributor">Farnell/1565385</field>
+      </fields>
+      <libsource lib="ssr-rescue" part="R-RESCUE-ssr"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>511F7F8E</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>10nF 400V</value>
+      <footprint>Capacitors_ThroughHole:C_Rect_L13_W4_P10</footprint>
+      <datasheet>http://www.kemet.com/Lists/ProductCatalog/Attachments/495/KEM_F3093_R46_X2_275_110C.pdf</datasheet>
+      <fields>
+        <field name="PartNo">R46KF210050N0K</field>
+        <field name="Manufacturer">Kemet</field>
+        <field name="Distributor">Farnell/1679293</field>
+      </fields>
+      <libsource lib="ssr-rescue" part="C-RESCUE-ssr"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>511F7F96</tstamp>
+    </comp>
+    <comp ref="P1">
+      <value>CONN_4</value>
+      <footprint>connect-SC-04</footprint>
+      <fields>
+        <field name="PartNo">?</field>
+        <field name="Manufacturer">?</field>
+        <field name="Distributor">?</field>
+      </fields>
+      <libsource lib="ssr-cache" part="CONN_4"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>511F854D</tstamp>
+    </comp>
+    <comp ref="C3">
+      <value>100nF 400V</value>
+      <footprint>Capacitors_ThroughHole:C_Rect_L13_W6_H12_P10</footprint>
+      <datasheet>http://www.farnell.com/datasheets/1734662.pdf</datasheet>
+      <fields>
+        <field name="PartNo">BFC233922104</field>
+        <field name="Manufacturer">VISHAY BC COMPONENTS</field>
+        <field name="Distributor">Farnell/1413837</field>
+      </fields>
+      <libsource lib="ssr-rescue" part="C-RESCUE-ssr"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>51601848</tstamp>
+    </comp>
+    <comp ref="R6">
+      <value>470R</value>
+      <footprint>w_pth_resistors:R12x5.2</footprint>
+      <datasheet>http://www.farnell.com/cad/1723196.pdf</datasheet>
+      <fields>
+        <field name="PartNo">CFR100J470R</field>
+        <field name="Manufacturer">TE CONNECTIVITY</field>
+        <field name="Distributor">Farnell/2329459</field>
+      </fields>
+      <libsource lib="ssr-rescue" part="R-RESCUE-ssr"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>51602617</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>47nF 400V</value>
+      <footprint>Capacitors_ThroughHole:C_Rect_L13_W6_H12_P10</footprint>
+      <datasheet> http://www.kemet.com/Lists/ProductCatalog/Attachments/495/KEM_F3093_R46_X2_275_110C.pdf</datasheet>
+      <fields>
+        <field name="PartNo">R46KI24705001K</field>
+        <field name="Manufacturer">Kemet</field>
+        <field name="Distributor">Farnell/1679306</field>
+      </fields>
+      <libsource lib="ssr-rescue" part="C-RESCUE-ssr"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>51602650</tstamp>
+    </comp>
+    <comp ref="P2">
+      <value>CONTACT</value>
+      <footprint>HOLE_60</footprint>
+      <fields>
+        <field name="PartNo">?</field>
+        <field name="Manufacturer">?</field>
+        <field name="Distributor">?</field>
+      </fields>
+      <libsource lib="ssr-cache" part="CONTACT"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>516976FE</tstamp>
+    </comp>
+    <comp ref="P3">
+      <value>CONTACT</value>
+      <footprint>HOLE_60</footprint>
+      <fields>
+        <field name="PartNo">?</field>
+        <field name="Manufacturer">?</field>
+        <field name="Distributor">?</field>
+      </fields>
+      <libsource lib="ssr-cache" part="CONTACT"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5169770B</tstamp>
+    </comp>
+    <comp ref="P4">
+      <value>CONTACT</value>
+      <footprint>HOLE_60</footprint>
+      <fields>
+        <field name="PartNo">?</field>
+        <field name="Manufacturer">?</field>
+        <field name="Distributor">?</field>
+      </fields>
+      <libsource lib="ssr-cache" part="CONTACT"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>51697711</tstamp>
+    </comp>
+    <comp ref="IC1">
+      <value>ATTINY44-SS</value>
+      <footprint>-SO-14</footprint>
+      <fields>
+        <field name="PartNo">?</field>
+        <field name="Manufacturer">?</field>
+        <field name="Distributor">?</field>
+      </fields>
+      <libsource lib="ssr-cache" part="ATTINY44-SS"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5169798E</tstamp>
+    </comp>
+    <comp ref="P6">
+      <value>CONN_4</value>
+      <footprint>connect-SC-04</footprint>
+      <fields>
+        <field name="PartNo">?</field>
+        <field name="Manufacturer">?</field>
+        <field name="Distributor">?</field>
+      </fields>
+      <libsource lib="ssr-cache" part="CONN_4"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>51698020</tstamp>
+    </comp>
+    <comp ref="R7">
+      <value>R</value>
+      <footprint>w_smd_resistors:r_0603</footprint>
+      <fields>
+        <field name="PartNo">?</field>
+        <field name="Manufacturer">?</field>
+        <field name="Distributor">?</field>
+      </fields>
+      <libsource lib="ssr-rescue" part="R-RESCUE-ssr"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>516986E3</tstamp>
+    </comp>
+    <comp ref="CON1">
+      <value>AVR-ISP-6</value>
+      <footprint>atmel-AVR-ISP-6</footprint>
+      <fields>
+        <field name="PartNo">?</field>
+        <field name="Manufacturer">?</field>
+        <field name="Distributor">?</field>
+      </fields>
+      <libsource lib="ssr-rescue" part="AVR-ISP-6-RESCUE-ssr"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>516A4B29</tstamp>
+    </comp>
+    <comp ref="C4">
+      <value>100nF</value>
+      <footprint>-C0603</footprint>
+      <libsource lib="ssr-rescue" part="C-RESCUE-ssr"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>516A4F31</tstamp>
+    </comp>
+    <comp ref="C5">
+      <value>100uF</value>
+      <footprint>Capacitors_Elko_ThroughHole:Elko_vert_11.2x7.5mm_RM2.5_CopperClear</footprint>
+      <fields>
+        <field name="PartNo">?</field>
+        <field name="Manufacturer">?</field>
+        <field name="Distributor">?</field>
+      </fields>
+      <libsource lib="ssr-cache" part="CAPAPOL"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>516A50F4</tstamp>
+    </comp>
+    <comp ref="R8">
+      <value>510k</value>
+      <footprint>w_pth_resistors:RC05</footprint>
+      <datasheet>http://www.farnell.com/datasheets/1716726.pdf</datasheet>
+      <fields>
+        <field name="PartNo">MF50 510K</field>
+        <field name="Manufacturer">MULTICOMP</field>
+        <field name="Distributor">Farnell/9340700</field>
+      </fields>
+      <libsource lib="ssr-rescue" part="R-RESCUE-ssr"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>516A9D39</tstamp>
+    </comp>
+    <comp ref="R10">
+      <value>200</value>
+      <footprint>w_smd_resistors:r_0603</footprint>
+      <fields>
+        <field name="PartNo">?</field>
+        <field name="Manufacturer">?</field>
+        <field name="Distributor">?</field>
+      </fields>
+      <libsource lib="ssr-rescue" part="R-RESCUE-ssr"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>516B0869</tstamp>
+    </comp>
+    <comp ref="R9">
+      <value>10k</value>
+      <footprint>w_smd_resistors:r_0603</footprint>
+      <fields>
+        <field name="PartNo">?</field>
+        <field name="Manufacturer">?</field>
+        <field name="Distributor">?</field>
+      </fields>
+      <libsource lib="ssr-rescue" part="R-RESCUE-ssr"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>516B0880</tstamp>
+    </comp>
+    <comp ref="C6">
+      <value>C</value>
+      <footprint>c_0603</footprint>
+      <fields>
+        <field name="PartNo">?</field>
+        <field name="Manufacturer">?</field>
+        <field name="Distributor">?</field>
+      </fields>
+      <libsource lib="ssr-rescue" part="C-RESCUE-ssr"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5183F45A</tstamp>
+    </comp>
+    <comp ref="D1">
+      <value>LED</value>
+      <footprint>SM0805</footprint>
+      <fields>
+        <field name="PartNo">?</field>
+        <field name="Manufacturer">?</field>
+        <field name="Distributor">?</field>
+      </fields>
+      <libsource lib="ssr-rescue" part="LED-RESCUE-ssr"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>51840F81</tstamp>
+    </comp>
+    <comp ref="D2">
+      <value>LED</value>
+      <footprint>SM0805</footprint>
+      <fields>
+        <field name="PartNo">?</field>
+        <field name="Manufacturer">?</field>
+        <field name="Distributor">?</field>
+      </fields>
+      <libsource lib="ssr-rescue" part="LED-RESCUE-ssr"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>51840FAE</tstamp>
+    </comp>
+    <comp ref="R11">
+      <value>R</value>
+      <footprint>w_smd_resistors:r_0603</footprint>
+      <fields>
+        <field name="PartNo">?</field>
+        <field name="Manufacturer">?</field>
+        <field name="Distributor">?</field>
+      </fields>
+      <libsource lib="ssr-rescue" part="R-RESCUE-ssr"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>51840FC2</tstamp>
+    </comp>
+    <comp ref="R12">
+      <value>R</value>
+      <footprint>w_smd_resistors:r_0603</footprint>
+      <fields>
+        <field name="PartNo">?</field>
+        <field name="Manufacturer">?</field>
+        <field name="Distributor">?</field>
+      </fields>
+      <libsource lib="ssr-rescue" part="R-RESCUE-ssr"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>51840FC9</tstamp>
+    </comp>
+    <comp ref="R13">
+      <value>220k</value>
+      <footprint>w_smd_resistors:r_2010</footprint>
+      <datasheet>http://www.farnell.com/datasheets/1718729.pdf</datasheet>
+      <fields>
+        <field name="PartNo">MCPWR10FTEQ2203</field>
+        <field name="Manufacturer">MULTICOMP</field>
+        <field name="Distributor">Farnell/1887681RL</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>56331ACB</tstamp>
+    </comp>
+    <comp ref="R14">
+      <value>220k</value>
+      <footprint>w_smd_resistors:r_2010</footprint>
+      <datasheet>http://www.farnell.com/datasheets/1718729.pdf</datasheet>
+      <fields>
+        <field name="PartNo">MCPWR10FTEQ2203</field>
+        <field name="Manufacturer">MULTICOMP</field>
+        <field name="Distributor">Farnell/1887681RL</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>56331BD8</tstamp>
+    </comp>
+    <comp ref="C8">
+      <value>1n</value>
+      <footprint>w_smd_cap:c_0603</footprint>
+      <fields>
+        <field name="PartNo">?</field>
+        <field name="Manufacturer">?</field>
+        <field name="Distributor">?</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>56331C4F</tstamp>
+    </comp>
+    <comp ref="D4">
+      <value>1N4148</value>
+      <footprint>Diodes_SMD:SOD-323</footprint>
+      <fields>
+        <field name="PartNo">1N4148WS</field>
+        <field name="Manufacturer">MULTICOMP</field>
+        <field name="Distributor">Farnell/1466524RL</field>
+      </fields>
+      <libsource lib="device" part="D"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>56331D39</tstamp>
+    </comp>
+    <comp ref="D5">
+      <value>1N4148</value>
+      <footprint>Diodes_SMD:SOD-323</footprint>
+      <fields>
+        <field name="PartNo">?</field>
+        <field name="Manufacturer">?</field>
+        <field name="Distributor">?</field>
+      </fields>
+      <libsource lib="device" part="D"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>56331DC2</tstamp>
+    </comp>
+    <comp ref="D6">
+      <value>1N4148</value>
+      <footprint>Diodes_SMD:SOD-323</footprint>
+      <fields>
+        <field name="PartNo">?</field>
+        <field name="Manufacturer">?</field>
+        <field name="Distributor">?</field>
+      </fields>
+      <libsource lib="device" part="D"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>56331E2D</tstamp>
+    </comp>
+    <comp ref="D7">
+      <value>1N4148</value>
+      <footprint>Diodes_SMD:SOD-323</footprint>
+      <fields>
+        <field name="PartNo">?</field>
+        <field name="Manufacturer">?</field>
+        <field name="Distributor">?</field>
+      </fields>
+      <libsource lib="device" part="D"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>56331F32</tstamp>
+    </comp>
+    <comp ref="R5">
+      <value>22k</value>
+      <footprint>w_smd_resistors:r_0603</footprint>
+      <fields>
+        <field name="PartNo">?</field>
+        <field name="Manufacturer">?</field>
+        <field name="Distributor">?</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>56331FC8</tstamp>
+    </comp>
+    <comp ref="C7">
+      <value>10u</value>
+      <footprint>Capacitors_Elko_ThroughHole:Elko_vert_11.2x7.5mm_RM2.5_CopperClear</footprint>
+      <fields>
+        <field name="PartNo">?</field>
+        <field name="Manufacturer">?</field>
+        <field name="Distributor">?</field>
+      </fields>
+      <libsource lib="device" part="CP"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>563321D6</tstamp>
+    </comp>
+    <comp ref="D3">
+      <value>1N4148</value>
+      <footprint>Diodes_SMD:SOD-323</footprint>
+      <fields>
+        <field name="PartNo">?</field>
+        <field name="Manufacturer">?</field>
+        <field name="Distributor">?</field>
+      </fields>
+      <libsource lib="device" part="D"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5633226E</tstamp>
+    </comp>
+    <comp ref="Q2">
+      <value>2N3904</value>
+      <footprint>w_smd_trans:sot23</footprint>
+      <datasheet>http://www.farnell.com/datasheets/1915516.pdf</datasheet>
+      <fields>
+        <field name="PartNo">MMBT3904-7-F</field>
+        <field name="Manufacturer">DIODES INC.</field>
+        <field name="Distributor">Farnell/1773602</field>
+      </fields>
+      <libsource lib="device" part="Q_NPN_BCE"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>56332304</tstamp>
+    </comp>
+    <comp ref="U3">
+      <value>4N35</value>
+      <footprint>w_smd_dil:mdip_6</footprint>
+      <datasheet>http://www.farnell.com/datasheets/1964301.pdf</datasheet>
+      <fields>
+        <field name="PartNo">4N35S-M..</field>
+        <field name="Manufacturer">FAIRCHILD SEMICONDUCTOR</field>
+        <field name="Distributor">Farnell/1021179</field>
+      </fields>
+      <libsource lib="opto" part="4N25"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>563323A3</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>1k</value>
+      <footprint>w_smd_resistors:r_0603</footprint>
+      <fields>
+        <field name="PartNo">?</field>
+        <field name="Manufacturer">?</field>
+        <field name="Distributor">?</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5633244A</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>4.7k</value>
+      <footprint>w_smd_resistors:r_0603</footprint>
+      <fields>
+        <field name="PartNo">?</field>
+        <field name="Manufacturer">?</field>
+        <field name="Distributor">?</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>56333627</tstamp>
+    </comp>
+    <comp ref="CONN10">
+      <value>CONN_01X06</value>
+      <libsource lib="conn" part="CONN_01X06"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>563617C2</tstamp>
+    </comp>
+    <comp ref="Q1">
+      <value>2N3904</value>
+      <footprint>w_smd_trans:sot23</footprint>
+      <datasheet>http://www.farnell.com/datasheets/1915516.pdf</datasheet>
+      <fields>
+        <field name="PartNo">MMBT3904-7-F</field>
+        <field name="Manufacturer">DIODES INC.</field>
+        <field name="Distributor">Farnell/1773602</field>
+      </fields>
+      <libsource lib="device" part="Q_NPN_BCE"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5636341F</tstamp>
+    </comp>
+    <comp ref="R15">
+      <value>1k</value>
+      <footprint>w_smd_resistors:r_0603</footprint>
+      <fields>
+        <field name="PartNo">?</field>
+        <field name="Manufacturer">?</field>
+        <field name="Distributor">?</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>56363959</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="ssr-rescue" part="OPTO-TRIAC-RESCUE-ssr">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">OPTO-TRIAC-RESCUE-ssr</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="input"/>
+        <pin num="2" name="K" type="input"/>
+        <pin num="3" name="NC" type="NotConnected"/>
+        <pin num="4" name="S2" type="output"/>
+        <pin num="5" name="NC" type="NotConnected"/>
+        <pin num="6" name="S1" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="C">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C?</fp>
+        <fp>C_????_*</fp>
+        <fp>C_????</fp>
+        <fp>SMD*_c</fp>
+        <fp>Capacitor*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="ssr-rescue" part="R-RESCUE-ssr">
+      <footprints>
+        <fp>R?</fp>
+        <fp>SM0603</fp>
+        <fp>SM0805</fp>
+        <fp>R?-*</fp>
+        <fp>SM1206</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R-RESCUE-ssr</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="FUSE">
+      <fields>
+        <field name="Reference">F</field>
+        <field name="Value">FUSE</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="input"/>
+        <pin num="2" name="~" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="INDUCTOR">
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">INDUCTOR</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+        <fp>Resistor_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="D">
+      <description>Diode</description>
+      <footprints>
+        <fp>Diode_*</fp>
+        <fp>D-Pak_TO252AA</fp>
+        <fp>*SingleDiode</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="TRIAC">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TRIAC</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="3" name="~" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="VR">
+      <description>VARISTANCE</description>
+      <fields>
+        <field name="Reference">VR</field>
+        <field name="Value">VR</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="opto" part="4N25">
+      <aliases>
+        <alias>4N26</alias>
+      </aliases>
+      <description>DIP6, DC Optocoupler Base Connected, Vce 30V, CTR 20%, Viso 2500V</description>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">4N25</field>
+        <field name="Footprint">DIP-6</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="4" name="~" type="passive"/>
+        <pin num="5" name="~" type="passive"/>
+        <pin num="6" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="ssr-cache" part="ATTINY44-SS">
+      <fields>
+        <field name="Reference">IC</field>
+        <field name="Value">ATTINY44-SS</field>
+        <field name="Footprint">SO14</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VCC" type="power_in"/>
+        <pin num="2" name="(PCINT8/CLKI/XTAL1)PB0" type="BiDi"/>
+        <pin num="3" name="(PCINT9/XTAL2)PB1" type="BiDi"/>
+        <pin num="4" name="(PCINT11/dW/~RESET~)PB3" type="BiDi"/>
+        <pin num="5" name="(PCINT10/CKOUT/OC0A/INT0)PB2" type="BiDi"/>
+        <pin num="6" name="(PCINT7/ICP/OC0B/ADC7)PA7" type="BiDi"/>
+        <pin num="7" name="(PCINT6/SDA/DI/MOSI/OC1A/ADC6)PA6" type="BiDi"/>
+        <pin num="8" name="(PCINT5/DO/MISO/OC1B/ADC5)PA5" type="BiDi"/>
+        <pin num="9" name="(PCINT4/USCK/SCL/T1/ADC4)PA4" type="BiDi"/>
+        <pin num="10" name="(PCINT3/T0/ADC3)PA3" type="BiDi"/>
+        <pin num="11" name="(PCINT2/AIN1/ADC2)PA2" type="BiDi"/>
+        <pin num="12" name="(PCINT1/AIN0/ADC1)PA1" type="BiDi"/>
+        <pin num="13" name="(PCINT0/AREF/ADC0)PA0" type="BiDi"/>
+        <pin num="14" name="GND" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="ssr-cache" part="CONN_4">
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_4</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="ssr-cache" part="CONTACT">
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONTACT</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="ssr-cache" part="CP">
+      <aliases>
+        <alias>CAPAPOL</alias>
+      </aliases>
+      <footprints>
+        <fp>CP*</fp>
+        <fp>SM*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CP</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="CONN_01X06">
+      <footprints>
+        <fp>Pin_Header_Straight_1X06</fp>
+        <fp>Pin_Header_Angled_1X06</fp>
+        <fp>Socket_Strip_Straight_1X06</fp>
+        <fp>Socket_Strip_Angled_1X06</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X06</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+        <pin num="5" name="P5" type="passive"/>
+        <pin num="6" name="P6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="ssr-rescue" part="AVR-ISP-6-RESCUE-ssr">
+      <fields>
+        <field name="Reference">CON</field>
+        <field name="Value">AVR-ISP-6-RESCUE-ssr</field>
+        <field name="Footprint">AVR-ISP-6</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="3" name="~" type="passive"/>
+        <pin num="4" name="~" type="passive"/>
+        <pin num="5" name="~" type="passive"/>
+        <pin num="6" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="CP">
+      <description>Polarised capacitor</description>
+      <footprints>
+        <fp>CP*</fp>
+        <fp>Elko*</fp>
+        <fp>TantalC*</fp>
+        <fp>C*elec</fp>
+        <fp>c_elec*</fp>
+        <fp>SMD*_Pol</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CP</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="ssr-rescue" part="C-RESCUE-ssr">
+      <footprints>
+        <fp>SM*</fp>
+        <fp>C?</fp>
+        <fp>C1-1</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C-RESCUE-ssr</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="ssr-rescue" part="LED-RESCUE-ssr">
+      <footprints>
+        <fp>LED-3MM</fp>
+        <fp>LED-5MM</fp>
+        <fp>LED-10MM</fp>
+        <fp>LED-0603</fp>
+        <fp>LED-0805</fp>
+        <fp>LED-1206</fp>
+        <fp>LEDV</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED-RESCUE-ssr</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="K" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="Q_NPN_BCE">
+      <description>Transistor NPN (general)</description>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">Q_NPN_BCE</field>
+      </fields>
+      <pins>
+        <pin num="1" name="B" type="input"/>
+        <pin num="2" name="C" type="passive"/>
+        <pin num="3" name="E" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="conn">
+      <uri>/usr/share/kicad/library/conn.lib</uri>
+    </library>
+    <library logical="opto">
+      <uri>/usr/share/kicad/library/opto.lib</uri>
+    </library>
+    <library logical="ssr-cache">
+      <uri>/home/miceuz/Xaltura/triac-bloc/ssr-cache.lib</uri>
+    </library>
+    <library logical="device">
+      <uri>/usr/share/kicad/library/device.lib</uri>
+    </library>
+    <library logical="ssr-rescue">
+      <uri>/home/miceuz/Xaltura/triac-bloc/ssr-rescue.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(IC1-Pad2)">
+      <node ref="R11" pin="1"/>
+      <node ref="IC1" pin="2"/>
+    </net>
+    <net code="2" name="GND">
+      <node ref="P6" pin="1"/>
+      <node ref="U3" pin="4"/>
+      <node ref="Q1" pin="3"/>
+      <node ref="CONN10" pin="1"/>
+      <node ref="R9" pin="2"/>
+      <node ref="C5" pin="2"/>
+      <node ref="CON1" pin="6"/>
+      <node ref="C4" pin="2"/>
+      <node ref="IC1" pin="14"/>
+      <node ref="P1" pin="1"/>
+      <node ref="C6" pin="2"/>
+      <node ref="D1" pin="2"/>
+      <node ref="D2" pin="2"/>
+    </net>
+    <net code="3" name="Net-(D2-Pad1)">
+      <node ref="R11" pin="2"/>
+      <node ref="D2" pin="1"/>
+    </net>
+    <net code="4" name="Net-(D1-Pad1)">
+      <node ref="R12" pin="2"/>
+      <node ref="D1" pin="1"/>
+    </net>
+    <net code="5" name="Net-(IC1-Pad3)">
+      <node ref="R12" pin="1"/>
+      <node ref="IC1" pin="3"/>
+    </net>
+    <net code="6" name="/RESET">
+      <node ref="IC1" pin="4"/>
+      <node ref="R7" pin="1"/>
+      <node ref="CON1" pin="5"/>
+    </net>
+    <net code="7" name="Net-(Q1-Pad2)">
+      <node ref="Q1" pin="2"/>
+      <node ref="R10" pin="2"/>
+    </net>
+    <net code="8" name="Net-(R10-Pad1)">
+      <node ref="U1" pin="2"/>
+      <node ref="R10" pin="1"/>
+    </net>
+    <net code="9" name="VCC">
+      <node ref="C6" pin="1"/>
+      <node ref="P6" pin="4"/>
+      <node ref="IC1" pin="1"/>
+      <node ref="P1" pin="3"/>
+      <node ref="R7" pin="2"/>
+      <node ref="U1" pin="1"/>
+      <node ref="CON1" pin="2"/>
+      <node ref="CONN10" pin="6"/>
+      <node ref="C5" pin="1"/>
+      <node ref="C4" pin="1"/>
+      <node ref="R2" pin="2"/>
+    </net>
+    <net code="10" name="Net-(Q2-Pad2)">
+      <node ref="U3" pin="2"/>
+      <node ref="Q2" pin="2"/>
+    </net>
+    <net code="11" name="Net-(CONN10-Pad4)">
+      <node ref="CONN10" pin="4"/>
+      <node ref="IC1" pin="12"/>
+    </net>
+    <net code="12" name="ON">
+      <node ref="IC1" pin="6"/>
+      <node ref="R9" pin="1"/>
+      <node ref="P1" pin="2"/>
+      <node ref="R15" pin="1"/>
+    </net>
+    <net code="13" name="Net-(Q1-Pad1)">
+      <node ref="Q1" pin="1"/>
+      <node ref="R15" pin="2"/>
+    </net>
+    <net code="14" name="Net-(CONN10-Pad5)">
+      <node ref="IC1" pin="13"/>
+      <node ref="CONN10" pin="5"/>
+    </net>
+    <net code="15" name="Net-(R4-Pad1)">
+      <node ref="U3" pin="1"/>
+      <node ref="R4" pin="1"/>
+    </net>
+    <net code="16" name="Net-(CONN10-Pad3)">
+      <node ref="CONN10" pin="3"/>
+      <node ref="IC1" pin="11"/>
+    </net>
+    <net code="17" name="Net-(CONN10-Pad2)">
+      <node ref="IC1" pin="10"/>
+      <node ref="CONN10" pin="2"/>
+    </net>
+    <net code="18" name="Net-(C7-Pad2)">
+      <node ref="C7" pin="2"/>
+      <node ref="Q2" pin="3"/>
+      <node ref="D3" pin="2"/>
+    </net>
+    <net code="19" name="Net-(U3-Pad6)">
+      <node ref="U3" pin="6"/>
+    </net>
+    <net code="20" name="Net-(D3-Pad1)">
+      <node ref="Q2" pin="1"/>
+      <node ref="D3" pin="1"/>
+      <node ref="R5" pin="1"/>
+      <node ref="D7" pin="2"/>
+      <node ref="D6" pin="2"/>
+    </net>
+    <net code="21" name="Net-(C8-Pad2)">
+      <node ref="R14" pin="1"/>
+      <node ref="C8" pin="2"/>
+      <node ref="D5" pin="2"/>
+      <node ref="D6" pin="1"/>
+    </net>
+    <net code="22" name="Net-(C7-Pad1)">
+      <node ref="D4" pin="1"/>
+      <node ref="R4" pin="2"/>
+      <node ref="C7" pin="1"/>
+      <node ref="D5" pin="1"/>
+      <node ref="R5" pin="2"/>
+    </net>
+    <net code="23" name="Net-(C8-Pad1)">
+      <node ref="D7" pin="1"/>
+      <node ref="D4" pin="2"/>
+      <node ref="R13" pin="1"/>
+      <node ref="C8" pin="1"/>
+    </net>
+    <net code="24" name="Net-(C2-Pad1)">
+      <node ref="C2" pin="1"/>
+      <node ref="R6" pin="1"/>
+      <node ref="R1" pin="2"/>
+    </net>
+    <net code="25" name="/SCK">
+      <node ref="CON1" pin="3"/>
+      <node ref="IC1" pin="9"/>
+      <node ref="P6" pin="2"/>
+    </net>
+    <net code="26" name="Net-(C1-Pad1)">
+      <node ref="R3" pin="1"/>
+      <node ref="C1" pin="1"/>
+    </net>
+    <net code="27" name="Net-(C3-Pad1)">
+      <node ref="VR1" pin="1"/>
+      <node ref="R8" pin="1"/>
+      <node ref="P2" pin="1"/>
+      <node ref="C3" pin="1"/>
+      <node ref="F1" pin="2"/>
+    </net>
+    <net code="28" name="Net-(R1-Pad1)">
+      <node ref="R1" pin="1"/>
+      <node ref="U1" pin="6"/>
+    </net>
+    <net code="29" name="Net-(U1-Pad5)">
+      <node ref="U1" pin="5"/>
+    </net>
+    <net code="30" name="Net-(U1-Pad3)">
+      <node ref="U1" pin="3"/>
+    </net>
+    <net code="31" name="Net-(C1-Pad2)">
+      <node ref="C2" pin="2"/>
+      <node ref="U2" pin="1"/>
+      <node ref="C1" pin="2"/>
+      <node ref="L1" pin="1"/>
+    </net>
+    <net code="32" name="ZERO_CROSSING">
+      <node ref="R2" pin="1"/>
+      <node ref="IC1" pin="5"/>
+      <node ref="U3" pin="5"/>
+      <node ref="P1" pin="4"/>
+    </net>
+    <net code="33" name="Net-(C3-Pad2)">
+      <node ref="P4" pin="1"/>
+      <node ref="C3" pin="2"/>
+      <node ref="L1" pin="2"/>
+      <node ref="R8" pin="2"/>
+    </net>
+    <net code="34" name="/FIRE">
+      <node ref="U2" pin="3"/>
+      <node ref="U1" pin="4"/>
+    </net>
+    <net code="35" name="/NEUTRAL">
+      <node ref="VR1" pin="2"/>
+      <node ref="R14" pin="2"/>
+      <node ref="P3" pin="1"/>
+    </net>
+    <net code="36" name="/LINE">
+      <node ref="R13" pin="2"/>
+      <node ref="R6" pin="2"/>
+      <node ref="F1" pin="1"/>
+      <node ref="R3" pin="2"/>
+      <node ref="U2" pin="2"/>
+    </net>
+    <net code="37" name="/MOSI">
+      <node ref="IC1" pin="7"/>
+      <node ref="P6" pin="3"/>
+      <node ref="CON1" pin="4"/>
+    </net>
+    <net code="38" name="/MISO">
+      <node ref="IC1" pin="8"/>
+      <node ref="CON1" pin="1"/>
+    </net>
+  </nets>
+</export>
