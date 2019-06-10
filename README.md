@@ -1,6 +1,11 @@
 triac-bloc
 ==========
 
+Version 3 plan:
+* use fl5150mx
+* rs845
+* filtering and protection 
+
 A universal power block based on triac. In essence this is a solid state relay that can be augmented with some bells and whistles. 
 
 Bells and whistles:
