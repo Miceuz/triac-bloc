@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name "ssr-rescue")(type "Legacy")(uri "${KIPRJMOD}/ssr-rescue.lib")(options "")(descr ""))
+  (lib (name "74xx")(type "Legacy")(uri "${KICAD_SYMBOL_DIR}/74xx.lib")(options "")(descr ""))
+  (lib (name "special")(type "Legacy")(uri "${KICAD_SYMBOL_DIR}/special.lib")(options "")(descr ""))
+)

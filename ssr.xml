@@ -2,8 +2,8 @@
 <export version="D">
   <design>
     <source>/home/miceuz/Xaltura/triac-bloc/ssr.sch</source>
-    <date>Sun 01 Nov 2015 06:47:00 PM EET</date>
-    <tool>Eeschema 0.201510281901+6285~30~ubuntu14.04.1-product</tool>
+    <date>Sat 07 Oct 2017 12:57:30 PM EEST</date>
+    <tool>Eeschema no-vcs-found-1164eaa~60~ubuntu16.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title/>
@@ -28,7 +28,7 @@
         <field name="Manufacturer">STMicroelectronics</field>
         <field name="Distributor">Farnell/1057288</field>
       </fields>
-      <libsource lib="device" part="TRIAC"/>
+      <libsource lib="ssr-cache" part="TRIAC"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>511F7BC7</tstamp>
     </comp>
@@ -41,7 +41,7 @@
         <field name="Manufacturer">FAIRCHILD SEMICONDUCTOR</field>
         <field name="Distributor">Farnell/1086680</field>
       </fields>
-      <libsource lib="ssr-rescue" part="OPTO-TRIAC-RESCUE-ssr"/>
+      <libsource lib="ssr-cache" part="OPTO-TRIAC-RESCUE-ssr"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>511F7BD6</tstamp>
     </comp>
@@ -54,7 +54,7 @@
         <field name="Manufacturer">Littelfuse Inc.</field>
         <field name="Distributor">Farnell/1596783</field>
       </fields>
-      <libsource lib="device" part="FUSE"/>
+      <libsource lib="ssr-cache" part="FUSE"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>511F7D38</tstamp>
     </comp>
@@ -67,7 +67,7 @@
         <field name="Manufacturer">TE CONNECTIVITY</field>
         <field name="Distributor">Farnell/2329590</field>
       </fields>
-      <libsource lib="ssr-rescue" part="R-RESCUE-ssr"/>
+      <libsource lib="ssr-cache" part="R-RESCUE-ssr"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>511F7E96</tstamp>
     </comp>
@@ -79,7 +79,7 @@
         <field name="Manufacturer">?</field>
         <field name="Distributor">?</field>
       </fields>
-      <libsource lib="device" part="INDUCTOR"/>
+      <libsource lib="ssr-cache" part="INDUCTOR"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>511F7ED4</tstamp>
     </comp>
@@ -92,7 +92,7 @@
         <field name="Manufacturer">MULTICOMP</field>
         <field name="Distributor">Farnell/1856861</field>
       </fields>
-      <libsource lib="device" part="VR"/>
+      <libsource lib="ssr-cache" part="VR"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>511F7F69</tstamp>
     </comp>
@@ -105,7 +105,7 @@
         <field name="Manufacturer">WELWYN</field>
         <field name="Distributor">Farnell/1565385</field>
       </fields>
-      <libsource lib="ssr-rescue" part="R-RESCUE-ssr"/>
+      <libsource lib="ssr-cache" part="R-RESCUE-ssr"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>511F7F8E</tstamp>
     </comp>
@@ -118,7 +118,7 @@
         <field name="Manufacturer">Kemet</field>
         <field name="Distributor">Farnell/1679293</field>
       </fields>
-      <libsource lib="ssr-rescue" part="C-RESCUE-ssr"/>
+      <libsource lib="ssr-cache" part="C-RESCUE-ssr"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>511F7F96</tstamp>
     </comp>
@@ -143,7 +143,7 @@
         <field name="Manufacturer">VISHAY BC COMPONENTS</field>
         <field name="Distributor">Farnell/1413837</field>
       </fields>
-      <libsource lib="ssr-rescue" part="C-RESCUE-ssr"/>
+      <libsource lib="ssr-cache" part="C-RESCUE-ssr"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>51601848</tstamp>
     </comp>
@@ -156,7 +156,7 @@
         <field name="Manufacturer">TE CONNECTIVITY</field>
         <field name="Distributor">Farnell/2329459</field>
       </fields>
-      <libsource lib="ssr-rescue" part="R-RESCUE-ssr"/>
+      <libsource lib="ssr-cache" part="R-RESCUE-ssr"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>51602617</tstamp>
     </comp>
@@ -169,57 +169,9 @@
         <field name="Manufacturer">Kemet</field>
         <field name="Distributor">Farnell/1679306</field>
       </fields>
-      <libsource lib="ssr-rescue" part="C-RESCUE-ssr"/>
+      <libsource lib="ssr-cache" part="C-RESCUE-ssr"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>51602650</tstamp>
-    </comp>
-    <comp ref="P2">
-      <value>CONTACT</value>
-      <footprint>HOLE_60</footprint>
-      <fields>
-        <field name="PartNo">?</field>
-        <field name="Manufacturer">?</field>
-        <field name="Distributor">?</field>
-      </fields>
-      <libsource lib="ssr-cache" part="CONTACT"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>516976FE</tstamp>
-    </comp>
-    <comp ref="P3">
-      <value>CONTACT</value>
-      <footprint>HOLE_60</footprint>
-      <fields>
-        <field name="PartNo">?</field>
-        <field name="Manufacturer">?</field>
-        <field name="Distributor">?</field>
-      </fields>
-      <libsource lib="ssr-cache" part="CONTACT"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5169770B</tstamp>
-    </comp>
-    <comp ref="P4">
-      <value>CONTACT</value>
-      <footprint>HOLE_60</footprint>
-      <fields>
-        <field name="PartNo">?</field>
-        <field name="Manufacturer">?</field>
-        <field name="Distributor">?</field>
-      </fields>
-      <libsource lib="ssr-cache" part="CONTACT"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>51697711</tstamp>
-    </comp>
-    <comp ref="IC1">
-      <value>ATTINY44-SS</value>
-      <footprint>-SO-14</footprint>
-      <fields>
-        <field name="PartNo">?</field>
-        <field name="Manufacturer">?</field>
-        <field name="Distributor">?</field>
-      </fields>
-      <libsource lib="ssr-cache" part="ATTINY44-SS"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5169798E</tstamp>
     </comp>
     <comp ref="P6">
       <value>CONN_4</value>
@@ -234,33 +186,38 @@
       <tstamp>51698020</tstamp>
     </comp>
     <comp ref="R7">
-      <value>R</value>
+      <value>10k</value>
       <footprint>w_smd_resistors:r_0603</footprint>
       <fields>
         <field name="PartNo">?</field>
         <field name="Manufacturer">?</field>
         <field name="Distributor">?</field>
       </fields>
-      <libsource lib="ssr-rescue" part="R-RESCUE-ssr"/>
+      <libsource lib="ssr-cache" part="R-RESCUE-ssr"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>516986E3</tstamp>
     </comp>
     <comp ref="CON1">
       <value>AVR-ISP-6</value>
-      <footprint>atmel-AVR-ISP-6</footprint>
+      <footprint>Pin_Headers:Pin_Header_Straight_2x03_Pitch2.54mm</footprint>
       <fields>
         <field name="PartNo">?</field>
         <field name="Manufacturer">?</field>
         <field name="Distributor">?</field>
       </fields>
-      <libsource lib="ssr-rescue" part="AVR-ISP-6-RESCUE-ssr"/>
+      <libsource lib="ssr-cache" part="AVR-ISP-6-RESCUE-ssr"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>516A4B29</tstamp>
     </comp>
     <comp ref="C4">
-      <value>100nF</value>
-      <footprint>-C0603</footprint>
-      <libsource lib="ssr-rescue" part="C-RESCUE-ssr"/>
+      <value>1u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <fields>
+        <field name="PartNo">?</field>
+        <field name="Manufacturer">?</field>
+        <field name="Distributor">?</field>
+      </fields>
+      <libsource lib="ssr-cache" part="C-RESCUE-ssr"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>516A4F31</tstamp>
     </comp>
@@ -285,7 +242,7 @@
         <field name="Manufacturer">MULTICOMP</field>
         <field name="Distributor">Farnell/9340700</field>
       </fields>
-      <libsource lib="ssr-rescue" part="R-RESCUE-ssr"/>
+      <libsource lib="ssr-cache" part="R-RESCUE-ssr"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>516A9D39</tstamp>
     </comp>
@@ -297,7 +254,7 @@
         <field name="Manufacturer">?</field>
         <field name="Distributor">?</field>
       </fields>
-      <libsource lib="ssr-rescue" part="R-RESCUE-ssr"/>
+      <libsource lib="ssr-cache" part="R-RESCUE-ssr"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>516B0869</tstamp>
     </comp>
@@ -309,19 +266,19 @@
         <field name="Manufacturer">?</field>
         <field name="Distributor">?</field>
       </fields>
-      <libsource lib="ssr-rescue" part="R-RESCUE-ssr"/>
+      <libsource lib="ssr-cache" part="R-RESCUE-ssr"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>516B0880</tstamp>
     </comp>
     <comp ref="C6">
       <value>C</value>
-      <footprint>c_0603</footprint>
+      <footprint>Capacitors_SMD:C_0603</footprint>
       <fields>
         <field name="PartNo">?</field>
         <field name="Manufacturer">?</field>
         <field name="Distributor">?</field>
       </fields>
-      <libsource lib="ssr-rescue" part="C-RESCUE-ssr"/>
+      <libsource lib="ssr-cache" part="C-RESCUE-ssr"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5183F45A</tstamp>
     </comp>
@@ -333,7 +290,7 @@
         <field name="Manufacturer">?</field>
         <field name="Distributor">?</field>
       </fields>
-      <libsource lib="ssr-rescue" part="LED-RESCUE-ssr"/>
+      <libsource lib="ssr-cache" part="LED-RESCUE-ssr"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>51840F81</tstamp>
     </comp>
@@ -345,31 +302,31 @@
         <field name="Manufacturer">?</field>
         <field name="Distributor">?</field>
       </fields>
-      <libsource lib="ssr-rescue" part="LED-RESCUE-ssr"/>
+      <libsource lib="ssr-cache" part="LED-RESCUE-ssr"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>51840FAE</tstamp>
     </comp>
     <comp ref="R11">
-      <value>R</value>
+      <value>220</value>
       <footprint>w_smd_resistors:r_0603</footprint>
       <fields>
         <field name="PartNo">?</field>
         <field name="Manufacturer">?</field>
         <field name="Distributor">?</field>
       </fields>
-      <libsource lib="ssr-rescue" part="R-RESCUE-ssr"/>
+      <libsource lib="ssr-cache" part="R-RESCUE-ssr"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>51840FC2</tstamp>
     </comp>
     <comp ref="R12">
-      <value>R</value>
+      <value>220</value>
       <footprint>w_smd_resistors:r_0603</footprint>
       <fields>
         <field name="PartNo">?</field>
         <field name="Manufacturer">?</field>
         <field name="Distributor">?</field>
       </fields>
-      <libsource lib="ssr-rescue" part="R-RESCUE-ssr"/>
+      <libsource lib="ssr-cache" part="R-RESCUE-ssr"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>51840FC9</tstamp>
     </comp>
@@ -479,7 +436,7 @@
         <field name="Manufacturer">?</field>
         <field name="Distributor">?</field>
       </fields>
-      <libsource lib="device" part="CP"/>
+      <libsource lib="ssr-cache" part="CP-RESCUE-ssr"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>563321D6</tstamp>
     </comp>
@@ -547,7 +504,13 @@
     </comp>
     <comp ref="CONN10">
       <value>CONN_01X06</value>
-      <libsource lib="conn" part="CONN_01X06"/>
+      <footprint>Pin_Headers:Pin_Header_Straight_1x06_Pitch2.54mm</footprint>
+      <fields>
+        <field name="PartNo">?</field>
+        <field name="Manufacturer">?</field>
+        <field name="Distributor">?</field>
+      </fields>
+      <libsource lib="ssr-cache" part="CONN_01X06"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>563617C2</tstamp>
     </comp>
@@ -576,30 +539,163 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>56363959</tstamp>
     </comp>
+    <comp ref="IC2">
+      <value>ATTINY441-SSU</value>
+      <footprint>Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm</footprint>
+      <fields>
+        <field name="PartNo">ATTINY441-SSU</field>
+        <field name="Manufacturer">ATMEL</field>
+        <field name="Distributor">Farnell/2396717</field>
+      </fields>
+      <libsource lib="atmel" part="ATTINY441-SSU"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>56370CB2</tstamp>
+    </comp>
+    <comp ref="U4">
+      <value>SP3485EN</value>
+      <footprint>Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm</footprint>
+      <fields>
+        <field name="PartNo">SP485EMN-L</field>
+        <field name="Manufacturer">EXAR</field>
+        <field name="Distributor">Farnell/9387196</field>
+      </fields>
+      <libsource lib="interface" part="SP3485EN"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5640132A</tstamp>
+    </comp>
+    <comp ref="R17">
+      <value>120</value>
+      <footprint>w_smd_resistors:r_0603</footprint>
+      <fields>
+        <field name="PartNo">?</field>
+        <field name="Manufacturer">?</field>
+        <field name="Distributor">?</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>56402E96</tstamp>
+    </comp>
+    <comp ref="R16">
+      <value>0R</value>
+      <footprint>w_smd_resistors:r_0603</footprint>
+      <fields>
+        <field name="PartNo">?</field>
+        <field name="Manufacturer">?</field>
+        <field name="Distributor">?</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>56403308</tstamp>
+    </comp>
+    <comp ref="C9">
+      <value>1u</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="ssr-cache" part="C-RESCUE-ssr"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5640407F</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>240VAC</value>
+      <footprint>Connectors_Molex:Molex_MiniFit-JR-5556-02A_2x01x4.20mm_Straight</footprint>
+      <fields>
+        <field name="PartNo">?</field>
+        <field name="Manufacturer">?</field>
+        <field name="Distributor">?</field>
+      </fields>
+      <libsource lib="ssr-cache" part="CONN_01X02"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>599BC1B3</tstamp>
+    </comp>
+    <comp ref="J2">
+      <value>LOAD</value>
+      <footprint>Connectors_Molex:Molex_MiniFit-JR-5556-02A_2x01x4.20mm_Straight</footprint>
+      <fields>
+        <field name="PartNo">?</field>
+        <field name="Manufacturer">?</field>
+        <field name="Distributor">?</field>
+      </fields>
+      <libsource lib="ssr-cache" part="CONN_01X02"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>599BC24F</tstamp>
+    </comp>
   </components>
   <libparts>
-    <libpart lib="ssr-rescue" part="OPTO-TRIAC-RESCUE-ssr">
+    <libpart lib="opto" part="4N25">
+      <aliases>
+        <alias>4N26</alias>
+        <alias>TIL111</alias>
+        <alias>4N27</alias>
+        <alias>4N28</alias>
+      </aliases>
+      <description>DC Optocoupler Base Connected, Vce 30V, CTR 20%, Viso 2500V, DIP6</description>
+      <docs>https://www.vishay.com/docs/83725/4n25.pdf</docs>
+      <footprints>
+        <fp>DIP*W7.62mm*</fp>
+      </footprints>
       <fields>
         <field name="Reference">U</field>
-        <field name="Value">OPTO-TRIAC-RESCUE-ssr</field>
+        <field name="Value">4N25</field>
+        <field name="Footprint">Housings_DIP:DIP-6_W7.62mm</field>
       </fields>
       <pins>
-        <pin num="1" name="A" type="input"/>
-        <pin num="2" name="K" type="input"/>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
         <pin num="3" name="NC" type="NotConnected"/>
-        <pin num="4" name="S2" type="output"/>
-        <pin num="5" name="NC" type="NotConnected"/>
-        <pin num="6" name="S1" type="input"/>
+        <pin num="4" name="~" type="passive"/>
+        <pin num="5" name="~" type="passive"/>
+        <pin num="6" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="atmel" part="ATTINY441-SSU">
+      <aliases>
+        <alias>ATTINY841-SSU</alias>
+      </aliases>
+      <description>SO14, 4k Flash, 256B SRAM, 256B EEPROM, ADC, ACI, dW</description>
+      <docs>http://www.atmel.com/Images/Atmel-8495-8-bit-AVR-Microcontrollers-ATtiny441-ATtiny841_Datasheet.pdf</docs>
+      <footprints>
+        <fp>SO*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ATTINY441-SSU</field>
+        <field name="Footprint">Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VCC" type="power_in"/>
+        <pin num="2" name="(PCINT8/CLKI/XTAL1/ADC11)PB0" type="BiDi"/>
+        <pin num="3" name="(PCINT9/INT0/XTAL2/ADC10)PB1" type="BiDi"/>
+        <pin num="4" name="(PCINT11/dW/~RESET~/ADC9)PB3" type="BiDi"/>
+        <pin num="5" name="(PCINT10/RXD0/ICP2/CLKO/TOCC7/ADC8)PB2" type="BiDi"/>
+        <pin num="6" name="(PCINT7/~SS~/TXD0/ICP1/TOCC6/ADC7)PA7" type="BiDi"/>
+        <pin num="7" name="(PCINT6/MOSI/SDA/XCK1/TOCC5/ACO1/ADC6)PA6" type="BiDi"/>
+        <pin num="8" name="(PCINT5/MISO/TXD1/T2/TOCC4/ACO0/ADC5)PA5" type="BiDi"/>
+        <pin num="9" name="(PCINT4/SCK/SCL/RXD1/T1/TOCC3/AIN11/ADC4)PA4" type="BiDi"/>
+        <pin num="10" name="(PCINT3/SCK/XCK0/T0/TOCC2/AIN10/ADC3)PA3" type="BiDi"/>
+        <pin num="11" name="(PCINT2/~SS~/RXD0/TOCC1/AIN01/ADC2)PA2" type="BiDi"/>
+        <pin num="12" name="(PCINT1/MOSI/TXD0/TOCC0/AIN00/ADC1)PA1" type="BiDi"/>
+        <pin num="13" name="(PCINT0/MISO/AREF/ADC0)PA0" type="BiDi"/>
+        <pin num="14" name="GND" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="ssr-cache" part="AVR-ISP-6-RESCUE-ssr">
+      <fields>
+        <field name="Reference">CON</field>
+        <field name="Value">AVR-ISP-6-RESCUE-ssr</field>
+        <field name="Footprint">AVR-ISP-6</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="3" name="~" type="passive"/>
+        <pin num="4" name="~" type="passive"/>
+        <pin num="5" name="~" type="passive"/>
+        <pin num="6" name="~" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="device" part="C">
       <description>Unpolarized capacitor</description>
       <footprints>
-        <fp>C?</fp>
-        <fp>C_????_*</fp>
-        <fp>C_????</fp>
-        <fp>SMD*_c</fp>
-        <fp>Capacitor*</fp>
+        <fp>C_*</fp>
       </footprints>
       <fields>
         <field name="Reference">C</field>
@@ -610,137 +706,55 @@
         <pin num="2" name="~" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="ssr-rescue" part="R-RESCUE-ssr">
+    <libpart lib="ssr-cache" part="C-RESCUE-ssr">
       <footprints>
-        <fp>R?</fp>
-        <fp>SM0603</fp>
-        <fp>SM0805</fp>
-        <fp>R?-*</fp>
-        <fp>SM1206</fp>
+        <fp>SM*</fp>
+        <fp>C?</fp>
+        <fp>C1-1</fp>
       </footprints>
       <fields>
-        <field name="Reference">R</field>
-        <field name="Value">R-RESCUE-ssr</field>
+        <field name="Reference">C</field>
+        <field name="Value">C-RESCUE-ssr</field>
       </fields>
       <pins>
         <pin num="1" name="~" type="passive"/>
         <pin num="2" name="~" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="device" part="FUSE">
-      <fields>
-        <field name="Reference">F</field>
-        <field name="Value">FUSE</field>
-      </fields>
-      <pins>
-        <pin num="1" name="~" type="input"/>
-        <pin num="2" name="~" type="input"/>
-      </pins>
-    </libpart>
-    <libpart lib="device" part="INDUCTOR">
-      <fields>
-        <field name="Reference">L</field>
-        <field name="Value">INDUCTOR</field>
-      </fields>
-      <pins>
-        <pin num="1" name="1" type="passive"/>
-        <pin num="2" name="2" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="device" part="R">
-      <description>Resistor</description>
+    <libpart lib="ssr-cache" part="CONN_01X02">
       <footprints>
-        <fp>R_*</fp>
-        <fp>Resistor_*</fp>
+        <fp>Pin_Header_Straight_1X*</fp>
+        <fp>Pin_Header_Angled_1X*</fp>
+        <fp>Socket_Strip_Straight_1X*</fp>
+        <fp>Socket_Strip_Angled_1X*</fp>
       </footprints>
       <fields>
-        <field name="Reference">R</field>
-        <field name="Value">R</field>
+        <field name="Reference">J</field>
+        <field name="Value">CONN_01X02</field>
       </fields>
       <pins>
-        <pin num="1" name="~" type="passive"/>
-        <pin num="2" name="~" type="passive"/>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="device" part="D">
-      <description>Diode</description>
+    <libpart lib="ssr-cache" part="CONN_01X06">
       <footprints>
-        <fp>Diode_*</fp>
-        <fp>D-Pak_TO252AA</fp>
-        <fp>*SingleDiode</fp>
-        <fp>*_Diode_*</fp>
-        <fp>*SingleDiode*</fp>
+        <fp>Pin_Header_Straight_1X*</fp>
+        <fp>Pin_Header_Angled_1X*</fp>
+        <fp>Socket_Strip_Straight_1X*</fp>
+        <fp>Socket_Strip_Angled_1X*</fp>
       </footprints>
       <fields>
-        <field name="Reference">D</field>
-        <field name="Value">D</field>
+        <field name="Reference">J</field>
+        <field name="Value">CONN_01X06</field>
       </fields>
       <pins>
-        <pin num="1" name="K" type="passive"/>
-        <pin num="2" name="A" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="device" part="TRIAC">
-      <fields>
-        <field name="Reference">U</field>
-        <field name="Value">TRIAC</field>
-      </fields>
-      <pins>
-        <pin num="1" name="~" type="passive"/>
-        <pin num="2" name="~" type="passive"/>
-        <pin num="3" name="~" type="input"/>
-      </pins>
-    </libpart>
-    <libpart lib="device" part="VR">
-      <description>VARISTANCE</description>
-      <fields>
-        <field name="Reference">VR</field>
-        <field name="Value">VR</field>
-      </fields>
-      <pins>
-        <pin num="1" name="~" type="passive"/>
-        <pin num="2" name="~" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="opto" part="4N25">
-      <aliases>
-        <alias>4N26</alias>
-      </aliases>
-      <description>DIP6, DC Optocoupler Base Connected, Vce 30V, CTR 20%, Viso 2500V</description>
-      <fields>
-        <field name="Reference">U</field>
-        <field name="Value">4N25</field>
-        <field name="Footprint">DIP-6</field>
-      </fields>
-      <pins>
-        <pin num="1" name="~" type="passive"/>
-        <pin num="2" name="~" type="passive"/>
-        <pin num="4" name="~" type="passive"/>
-        <pin num="5" name="~" type="passive"/>
-        <pin num="6" name="~" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="ssr-cache" part="ATTINY44-SS">
-      <fields>
-        <field name="Reference">IC</field>
-        <field name="Value">ATTINY44-SS</field>
-        <field name="Footprint">SO14</field>
-      </fields>
-      <pins>
-        <pin num="1" name="VCC" type="power_in"/>
-        <pin num="2" name="(PCINT8/CLKI/XTAL1)PB0" type="BiDi"/>
-        <pin num="3" name="(PCINT9/XTAL2)PB1" type="BiDi"/>
-        <pin num="4" name="(PCINT11/dW/~RESET~)PB3" type="BiDi"/>
-        <pin num="5" name="(PCINT10/CKOUT/OC0A/INT0)PB2" type="BiDi"/>
-        <pin num="6" name="(PCINT7/ICP/OC0B/ADC7)PA7" type="BiDi"/>
-        <pin num="7" name="(PCINT6/SDA/DI/MOSI/OC1A/ADC6)PA6" type="BiDi"/>
-        <pin num="8" name="(PCINT5/DO/MISO/OC1B/ADC5)PA5" type="BiDi"/>
-        <pin num="9" name="(PCINT4/USCK/SCL/T1/ADC4)PA4" type="BiDi"/>
-        <pin num="10" name="(PCINT3/T0/ADC3)PA3" type="BiDi"/>
-        <pin num="11" name="(PCINT2/AIN1/ADC2)PA2" type="BiDi"/>
-        <pin num="12" name="(PCINT1/AIN0/ADC1)PA1" type="BiDi"/>
-        <pin num="13" name="(PCINT0/AREF/ADC0)PA0" type="BiDi"/>
-        <pin num="14" name="GND" type="power_in"/>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+        <pin num="5" name="P5" type="passive"/>
+        <pin num="6" name="P6" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="ssr-cache" part="CONN_4">
@@ -753,15 +767,6 @@
         <pin num="2" name="P2" type="passive"/>
         <pin num="3" name="P3" type="passive"/>
         <pin num="4" name="P4" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="ssr-cache" part="CONTACT">
-      <fields>
-        <field name="Reference">P</field>
-        <field name="Value">CONTACT</field>
-      </fields>
-      <pins>
-        <pin num="1" name="1" type="input"/>
       </pins>
     </libpart>
     <libpart lib="ssr-cache" part="CP">
@@ -781,76 +786,59 @@
         <pin num="2" name="~" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="conn" part="CONN_01X06">
-      <footprints>
-        <fp>Pin_Header_Straight_1X06</fp>
-        <fp>Pin_Header_Angled_1X06</fp>
-        <fp>Socket_Strip_Straight_1X06</fp>
-        <fp>Socket_Strip_Angled_1X06</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">P</field>
-        <field name="Value">CONN_01X06</field>
-      </fields>
-      <pins>
-        <pin num="1" name="P1" type="passive"/>
-        <pin num="2" name="P2" type="passive"/>
-        <pin num="3" name="P3" type="passive"/>
-        <pin num="4" name="P4" type="passive"/>
-        <pin num="5" name="P5" type="passive"/>
-        <pin num="6" name="P6" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="ssr-rescue" part="AVR-ISP-6-RESCUE-ssr">
-      <fields>
-        <field name="Reference">CON</field>
-        <field name="Value">AVR-ISP-6-RESCUE-ssr</field>
-        <field name="Footprint">AVR-ISP-6</field>
-      </fields>
-      <pins>
-        <pin num="1" name="~" type="passive"/>
-        <pin num="2" name="~" type="passive"/>
-        <pin num="3" name="~" type="passive"/>
-        <pin num="4" name="~" type="passive"/>
-        <pin num="5" name="~" type="passive"/>
-        <pin num="6" name="~" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="device" part="CP">
-      <description>Polarised capacitor</description>
+    <libpart lib="ssr-cache" part="CP-RESCUE-ssr">
       <footprints>
         <fp>CP*</fp>
-        <fp>Elko*</fp>
-        <fp>TantalC*</fp>
-        <fp>C*elec</fp>
-        <fp>c_elec*</fp>
-        <fp>SMD*_Pol</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">C</field>
-        <field name="Value">CP</field>
-      </fields>
-      <pins>
-        <pin num="1" name="~" type="passive"/>
-        <pin num="2" name="~" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="ssr-rescue" part="C-RESCUE-ssr">
-      <footprints>
         <fp>SM*</fp>
-        <fp>C?</fp>
-        <fp>C1-1</fp>
       </footprints>
       <fields>
         <field name="Reference">C</field>
-        <field name="Value">C-RESCUE-ssr</field>
+        <field name="Value">CP-RESCUE-ssr</field>
       </fields>
       <pins>
         <pin num="1" name="~" type="passive"/>
         <pin num="2" name="~" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="ssr-rescue" part="LED-RESCUE-ssr">
+    <libpart lib="device" part="D">
+      <description>Diode</description>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*SingleDiode</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="ssr-cache" part="FUSE">
+      <fields>
+        <field name="Reference">F</field>
+        <field name="Value">FUSE</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="input"/>
+        <pin num="2" name="~" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="ssr-cache" part="INDUCTOR">
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">INDUCTOR</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="ssr-cache" part="LED-RESCUE-ssr">
       <footprints>
         <fp>LED-3MM</fp>
         <fp>LED-5MM</fp>
@@ -869,6 +857,20 @@
         <pin num="2" name="K" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="ssr-cache" part="OPTO-TRIAC-RESCUE-ssr">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">OPTO-TRIAC-RESCUE-ssr</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="input"/>
+        <pin num="2" name="K" type="input"/>
+        <pin num="3" name="NC" type="NotConnected"/>
+        <pin num="4" name="S2" type="output"/>
+        <pin num="5" name="NC" type="NotConnected"/>
+        <pin num="6" name="S1" type="input"/>
+      </pins>
+    </libpart>
     <libpart lib="device" part="Q_NPN_BCE">
       <description>Transistor NPN (general)</description>
       <fields>
@@ -881,10 +883,96 @@
         <pin num="3" name="E" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="device" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="ssr-cache" part="R-RESCUE-ssr">
+      <footprints>
+        <fp>R?</fp>
+        <fp>SM0603</fp>
+        <fp>SM0805</fp>
+        <fp>R?-*</fp>
+        <fp>SM1206</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R-RESCUE-ssr</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="interface" part="SP3481CN">
+      <aliases>
+        <alias>MAX3072E</alias>
+        <alias>MAX3075E</alias>
+        <alias>MAX3078E</alias>
+        <alias>SP3481EN</alias>
+        <alias>SP3485CN</alias>
+        <alias>SP3485EN</alias>
+      </aliases>
+      <description>3.3V Low Power Half-Duplex RS-485 Transceiver 10Mbps, SO8</description>
+      <docs>http://www.icbase.com/pdf/SPX/SPX00480106.pdf</docs>
+      <footprints>
+        <fp>SOIC*3.9x4.9mm*Pitch1.27mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">SP3481CN</field>
+        <field name="Footprint">Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm</field>
+      </fields>
+      <pins>
+        <pin num="1" name="RO" type="output"/>
+        <pin num="2" name="~RE~" type="input"/>
+        <pin num="3" name="DE" type="input"/>
+        <pin num="4" name="DI" type="input"/>
+        <pin num="5" name="GND" type="power_in"/>
+        <pin num="6" name="A" type="BiDi"/>
+        <pin num="7" name="B" type="BiDi"/>
+        <pin num="8" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="ssr-cache" part="TRIAC">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TRIAC</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="3" name="~" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="ssr-cache" part="VR">
+      <fields>
+        <field name="Reference">VR</field>
+        <field name="Value">VR</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
   </libparts>
   <libraries>
-    <library logical="conn">
-      <uri>/usr/share/kicad/library/conn.lib</uri>
+    <library logical="device">
+      <uri>/usr/share/kicad/library/device.lib</uri>
+    </library>
+    <library logical="interface">
+      <uri>/usr/share/kicad/library/interface.lib</uri>
     </library>
     <library logical="opto">
       <uri>/usr/share/kicad/library/opto.lib</uri>
@@ -892,212 +980,233 @@
     <library logical="ssr-cache">
       <uri>/home/miceuz/Xaltura/triac-bloc/ssr-cache.lib</uri>
     </library>
-    <library logical="device">
-      <uri>/usr/share/kicad/library/device.lib</uri>
-    </library>
-    <library logical="ssr-rescue">
-      <uri>/home/miceuz/Xaltura/triac-bloc/ssr-rescue.lib</uri>
+    <library logical="atmel">
+      <uri>/usr/share/kicad/library/atmel.lib</uri>
     </library>
   </libraries>
   <nets>
-    <net code="1" name="Net-(IC1-Pad2)">
-      <node ref="R11" pin="1"/>
-      <node ref="IC1" pin="2"/>
+    <net code="1" name="Net-(C8-Pad2)">
+      <node ref="R14" pin="1"/>
+      <node ref="D5" pin="2"/>
+      <node ref="C8" pin="2"/>
+      <node ref="D6" pin="1"/>
     </net>
-    <net code="2" name="GND">
-      <node ref="P6" pin="1"/>
-      <node ref="U3" pin="4"/>
-      <node ref="Q1" pin="3"/>
-      <node ref="CONN10" pin="1"/>
-      <node ref="R9" pin="2"/>
-      <node ref="C5" pin="2"/>
-      <node ref="CON1" pin="6"/>
-      <node ref="C4" pin="2"/>
-      <node ref="IC1" pin="14"/>
-      <node ref="P1" pin="1"/>
-      <node ref="C6" pin="2"/>
-      <node ref="D1" pin="2"/>
-      <node ref="D2" pin="2"/>
-    </net>
-    <net code="3" name="Net-(D2-Pad1)">
+    <net code="2" name="Net-(D2-Pad1)">
       <node ref="R11" pin="2"/>
       <node ref="D2" pin="1"/>
     </net>
-    <net code="4" name="Net-(D1-Pad1)">
-      <node ref="R12" pin="2"/>
+    <net code="3" name="Net-(D1-Pad1)">
       <node ref="D1" pin="1"/>
+      <node ref="R12" pin="2"/>
     </net>
-    <net code="5" name="Net-(IC1-Pad3)">
-      <node ref="R12" pin="1"/>
-      <node ref="IC1" pin="3"/>
+    <net code="4" name="Net-(C3-Pad1)">
+      <node ref="J1" pin="1"/>
+      <node ref="R8" pin="1"/>
+      <node ref="F1" pin="2"/>
+      <node ref="C3" pin="1"/>
     </net>
-    <net code="6" name="/RESET">
-      <node ref="IC1" pin="4"/>
-      <node ref="R7" pin="1"/>
-      <node ref="CON1" pin="5"/>
-    </net>
-    <net code="7" name="Net-(Q1-Pad2)">
-      <node ref="Q1" pin="2"/>
-      <node ref="R10" pin="2"/>
-    </net>
-    <net code="8" name="Net-(R10-Pad1)">
-      <node ref="U1" pin="2"/>
-      <node ref="R10" pin="1"/>
-    </net>
-    <net code="9" name="VCC">
-      <node ref="C6" pin="1"/>
-      <node ref="P6" pin="4"/>
-      <node ref="IC1" pin="1"/>
-      <node ref="P1" pin="3"/>
-      <node ref="R7" pin="2"/>
-      <node ref="U1" pin="1"/>
-      <node ref="CON1" pin="2"/>
-      <node ref="CONN10" pin="6"/>
-      <node ref="C5" pin="1"/>
-      <node ref="C4" pin="1"/>
-      <node ref="R2" pin="2"/>
-    </net>
-    <net code="10" name="Net-(Q2-Pad2)">
-      <node ref="U3" pin="2"/>
-      <node ref="Q2" pin="2"/>
-    </net>
-    <net code="11" name="Net-(CONN10-Pad4)">
-      <node ref="CONN10" pin="4"/>
-      <node ref="IC1" pin="12"/>
-    </net>
-    <net code="12" name="ON">
-      <node ref="IC1" pin="6"/>
-      <node ref="R9" pin="1"/>
-      <node ref="P1" pin="2"/>
-      <node ref="R15" pin="1"/>
-    </net>
-    <net code="13" name="Net-(Q1-Pad1)">
-      <node ref="Q1" pin="1"/>
-      <node ref="R15" pin="2"/>
-    </net>
-    <net code="14" name="Net-(CONN10-Pad5)">
-      <node ref="IC1" pin="13"/>
-      <node ref="CONN10" pin="5"/>
-    </net>
-    <net code="15" name="Net-(R4-Pad1)">
+    <net code="5" name="Net-(R4-Pad1)">
       <node ref="U3" pin="1"/>
       <node ref="R4" pin="1"/>
     </net>
-    <net code="16" name="Net-(CONN10-Pad3)">
-      <node ref="CONN10" pin="3"/>
-      <node ref="IC1" pin="11"/>
-    </net>
-    <net code="17" name="Net-(CONN10-Pad2)">
-      <node ref="IC1" pin="10"/>
+    <net code="6" name="Net-(CONN10-Pad2)">
+      <node ref="IC2" pin="10"/>
       <node ref="CONN10" pin="2"/>
     </net>
-    <net code="18" name="Net-(C7-Pad2)">
+    <net code="7" name="Net-(Q2-Pad2)">
+      <node ref="Q2" pin="2"/>
+      <node ref="U3" pin="2"/>
+    </net>
+    <net code="8" name="Net-(C7-Pad1)">
+      <node ref="R4" pin="2"/>
+      <node ref="D5" pin="1"/>
+      <node ref="D4" pin="1"/>
+      <node ref="R5" pin="2"/>
+      <node ref="C7" pin="1"/>
+    </net>
+    <net code="9" name="Net-(C7-Pad2)">
+      <node ref="D3" pin="2"/>
       <node ref="C7" pin="2"/>
       <node ref="Q2" pin="3"/>
-      <node ref="D3" pin="2"/>
     </net>
-    <net code="19" name="Net-(U3-Pad6)">
-      <node ref="U3" pin="6"/>
-    </net>
-    <net code="20" name="Net-(D3-Pad1)">
-      <node ref="Q2" pin="1"/>
-      <node ref="D3" pin="1"/>
-      <node ref="R5" pin="1"/>
-      <node ref="D7" pin="2"/>
-      <node ref="D6" pin="2"/>
-    </net>
-    <net code="21" name="Net-(C8-Pad2)">
-      <node ref="R14" pin="1"/>
-      <node ref="C8" pin="2"/>
-      <node ref="D5" pin="2"/>
-      <node ref="D6" pin="1"/>
-    </net>
-    <net code="22" name="Net-(C7-Pad1)">
-      <node ref="D4" pin="1"/>
-      <node ref="R4" pin="2"/>
-      <node ref="C7" pin="1"/>
-      <node ref="D5" pin="1"/>
-      <node ref="R5" pin="2"/>
-    </net>
-    <net code="23" name="Net-(C8-Pad1)">
+    <net code="10" name="Net-(C8-Pad1)">
+      <node ref="R13" pin="1"/>
       <node ref="D7" pin="1"/>
       <node ref="D4" pin="2"/>
-      <node ref="R13" pin="1"/>
       <node ref="C8" pin="1"/>
     </net>
-    <net code="24" name="Net-(C2-Pad1)">
-      <node ref="C2" pin="1"/>
-      <node ref="R6" pin="1"/>
-      <node ref="R1" pin="2"/>
-    </net>
-    <net code="25" name="/SCK">
-      <node ref="CON1" pin="3"/>
-      <node ref="IC1" pin="9"/>
-      <node ref="P6" pin="2"/>
-    </net>
-    <net code="26" name="Net-(C1-Pad1)">
-      <node ref="R3" pin="1"/>
-      <node ref="C1" pin="1"/>
-    </net>
-    <net code="27" name="Net-(C3-Pad1)">
-      <node ref="VR1" pin="1"/>
-      <node ref="R8" pin="1"/>
-      <node ref="P2" pin="1"/>
-      <node ref="C3" pin="1"/>
-      <node ref="F1" pin="2"/>
-    </net>
-    <net code="28" name="Net-(R1-Pad1)">
-      <node ref="R1" pin="1"/>
-      <node ref="U1" pin="6"/>
-    </net>
-    <net code="29" name="Net-(U1-Pad5)">
-      <node ref="U1" pin="5"/>
-    </net>
-    <net code="30" name="Net-(U1-Pad3)">
-      <node ref="U1" pin="3"/>
-    </net>
-    <net code="31" name="Net-(C1-Pad2)">
-      <node ref="C2" pin="2"/>
+    <net code="11" name="/LOAD">
       <node ref="U2" pin="1"/>
-      <node ref="C1" pin="2"/>
+      <node ref="C2" pin="2"/>
       <node ref="L1" pin="1"/>
+      <node ref="C1" pin="2"/>
     </net>
-    <net code="32" name="ZERO_CROSSING">
+    <net code="12" name="ON">
+      <node ref="R9" pin="1"/>
+      <node ref="P1" pin="3"/>
+      <node ref="R15" pin="1"/>
+      <node ref="IC2" pin="2"/>
+    </net>
+    <net code="13" name="Net-(R1-Pad1)">
+      <node ref="U1" pin="6"/>
+      <node ref="R1" pin="1"/>
+    </net>
+    <net code="14" name="Net-(C2-Pad1)">
+      <node ref="R1" pin="2"/>
+      <node ref="R6" pin="1"/>
+      <node ref="C2" pin="1"/>
+    </net>
+    <net code="15" name="/MISO">
+      <node ref="CON1" pin="1"/>
+      <node ref="R12" pin="1"/>
+      <node ref="IC2" pin="8"/>
+    </net>
+    <net code="16" name="/RESET">
+      <node ref="R7" pin="1"/>
+      <node ref="IC2" pin="4"/>
+      <node ref="CON1" pin="5"/>
+    </net>
+    <net code="17" name="ZERO_CROSSING">
+      <node ref="IC2" pin="3"/>
       <node ref="R2" pin="1"/>
-      <node ref="IC1" pin="5"/>
-      <node ref="U3" pin="5"/>
       <node ref="P1" pin="4"/>
+      <node ref="U3" pin="5"/>
     </net>
-    <net code="33" name="Net-(C3-Pad2)">
-      <node ref="P4" pin="1"/>
-      <node ref="C3" pin="2"/>
+    <net code="18" name="/LOAD-FILTERED">
       <node ref="L1" pin="2"/>
+      <node ref="J2" pin="1"/>
       <node ref="R8" pin="2"/>
+      <node ref="C3" pin="2"/>
     </net>
-    <net code="34" name="/FIRE">
+    <net code="19" name="/SCK">
+      <node ref="U4" pin="2"/>
+      <node ref="U4" pin="3"/>
+      <node ref="CON1" pin="3"/>
+      <node ref="IC2" pin="9"/>
+    </net>
+    <net code="20" name="GND">
+      <node ref="C4" pin="2"/>
+      <node ref="CON1" pin="6"/>
+      <node ref="C5" pin="2"/>
+      <node ref="U4" pin="5"/>
+      <node ref="D1" pin="2"/>
+      <node ref="R9" pin="2"/>
+      <node ref="C6" pin="2"/>
+      <node ref="P6" pin="4"/>
+      <node ref="C9" pin="2"/>
+      <node ref="U3" pin="4"/>
+      <node ref="D2" pin="2"/>
+      <node ref="CONN10" pin="1"/>
+      <node ref="IC2" pin="14"/>
+      <node ref="P1" pin="1"/>
+      <node ref="Q1" pin="3"/>
+    </net>
+    <net code="21" name="VCC">
+      <node ref="C9" pin="1"/>
+      <node ref="IC2" pin="1"/>
+      <node ref="C6" pin="1"/>
+      <node ref="R2" pin="2"/>
+      <node ref="CONN10" pin="6"/>
+      <node ref="P1" pin="2"/>
+      <node ref="U1" pin="1"/>
+      <node ref="U4" pin="8"/>
+      <node ref="CON1" pin="2"/>
+      <node ref="R7" pin="2"/>
+      <node ref="C4" pin="1"/>
+      <node ref="P6" pin="1"/>
+      <node ref="C5" pin="1"/>
+    </net>
+    <net code="22" name="Net-(R16-Pad2)">
+      <node ref="R17" pin="1"/>
+      <node ref="R16" pin="2"/>
+    </net>
+    <net code="23" name="/RS485-A">
+      <node ref="R16" pin="1"/>
+      <node ref="P6" pin="3"/>
+      <node ref="U4" pin="6"/>
+    </net>
+    <net code="24" name="/RX">
+      <node ref="U4" pin="1"/>
+      <node ref="IC2" pin="5"/>
+    </net>
+    <net code="25" name="Net-(CONN10-Pad5)">
+      <node ref="CONN10" pin="5"/>
+      <node ref="IC2" pin="13"/>
+    </net>
+    <net code="26" name="Net-(CONN10-Pad4)">
+      <node ref="CONN10" pin="4"/>
+      <node ref="IC2" pin="12"/>
+    </net>
+    <net code="27" name="Net-(CONN10-Pad3)">
+      <node ref="CONN10" pin="3"/>
+      <node ref="IC2" pin="11"/>
+    </net>
+    <net code="28" name="/RS485-B">
+      <node ref="P6" pin="2"/>
+      <node ref="U4" pin="7"/>
+      <node ref="R17" pin="2"/>
+    </net>
+    <net code="29" name="/TX">
+      <node ref="U4" pin="4"/>
+      <node ref="IC2" pin="6"/>
+    </net>
+    <net code="30" name="/FIRE">
       <node ref="U2" pin="3"/>
       <node ref="U1" pin="4"/>
     </net>
-    <net code="35" name="/NEUTRAL">
+    <net code="31" name="/NEUTRAL">
+      <node ref="J2" pin="2"/>
+      <node ref="J1" pin="2"/>
       <node ref="VR1" pin="2"/>
       <node ref="R14" pin="2"/>
-      <node ref="P3" pin="1"/>
     </net>
-    <net code="36" name="/LINE">
-      <node ref="R13" pin="2"/>
-      <node ref="R6" pin="2"/>
-      <node ref="F1" pin="1"/>
-      <node ref="R3" pin="2"/>
-      <node ref="U2" pin="2"/>
-    </net>
-    <net code="37" name="/MOSI">
-      <node ref="IC1" pin="7"/>
-      <node ref="P6" pin="3"/>
+    <net code="32" name="/MOSI">
+      <node ref="R11" pin="1"/>
       <node ref="CON1" pin="4"/>
+      <node ref="IC2" pin="7"/>
     </net>
-    <net code="38" name="/MISO">
-      <node ref="IC1" pin="8"/>
-      <node ref="CON1" pin="1"/>
+    <net code="33" name="Net-(C1-Pad1)">
+      <node ref="C1" pin="1"/>
+      <node ref="R3" pin="1"/>
+    </net>
+    <net code="34" name="/LINE">
+      <node ref="R3" pin="2"/>
+      <node ref="VR1" pin="1"/>
+      <node ref="F1" pin="1"/>
+      <node ref="U2" pin="2"/>
+      <node ref="R6" pin="2"/>
+      <node ref="R13" pin="2"/>
+    </net>
+    <net code="35" name="Net-(U1-Pad5)">
+      <node ref="U1" pin="5"/>
+    </net>
+    <net code="36" name="Net-(U1-Pad3)">
+      <node ref="U1" pin="3"/>
+    </net>
+    <net code="37" name="Net-(R10-Pad1)">
+      <node ref="R10" pin="1"/>
+      <node ref="U1" pin="2"/>
+    </net>
+    <net code="38" name="Net-(U3-Pad6)">
+      <node ref="U3" pin="6"/>
+    </net>
+    <net code="39" name="Net-(U3-Pad3)">
+      <node ref="U3" pin="3"/>
+    </net>
+    <net code="40" name="Net-(Q1-Pad1)">
+      <node ref="Q1" pin="1"/>
+      <node ref="R15" pin="2"/>
+    </net>
+    <net code="41" name="Net-(Q1-Pad2)">
+      <node ref="Q1" pin="2"/>
+      <node ref="R10" pin="2"/>
+    </net>
+    <net code="42" name="Net-(D3-Pad1)">
+      <node ref="Q2" pin="1"/>
+      <node ref="D6" pin="2"/>
+      <node ref="D3" pin="1"/>
+      <node ref="D7" pin="2"/>
+      <node ref="R5" pin="1"/>
     </net>
   </nets>
 </export>
